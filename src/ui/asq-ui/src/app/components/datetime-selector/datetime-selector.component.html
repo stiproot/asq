@@ -1,0 +1,29 @@
+<form [formGroup]="datetimeGroup">
+    <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate" formControlName="dateCtrl">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="datetimeGroup.get('dateCtrl').hasError('required')">Date required</mat-error>
+    </mat-form-field>
+    <mat-form-field class="selector-width">
+        <mat-label>Choose a time</mat-label>
+        <mat-select [(ngModel)]="selectedHour" formControlName="hourCtrl">
+            <mat-option *ngFor="let hour of hours" [value]="hour">{{hour}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="datetimeGroup.get('hourCtrl').hasError('required')">Hour required</mat-error>
+    </mat-form-field>
+    <mat-form-field class="selector-width">
+        <mat-select [(ngModel)]="selectedMin" formControlName="minCtrl">
+            <mat-option *ngFor="let min of minutes" [value]="min">{{min}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="datetimeGroup.get('minCtrl').hasError('required')">Minutes required</mat-error>
+    </mat-form-field>
+    <mat-form-field class="selector-width">
+        <mat-select [(ngModel)]="selectedTimePeriod" formControlName="periodCtrl">
+            <mat-option value="am">AM</mat-option>
+            <mat-option value="pm">PM</mat-option>
+        </mat-select>
+        <mat-error *ngIf="datetimeGroup.get('periodCtrl').hasError('required')">Time period required</mat-error>
+    </mat-form-field>
+</form>

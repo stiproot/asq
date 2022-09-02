@@ -1,0 +1,22 @@
+.img-preview{
+    height: 200px;
+}
+
+.duration-selector{
+    width:100px;
+}
+
+.timezone-selector{
+    width:200px;
+}
+
+.start-date{
+    width:200px;
+}
+
+.edit-btn{
+    position:fixed !important;
+    right:50px;
+    bottom:50px;
+    z-index: 1;
+}

@@ -1,0 +1,79 @@
+{
+    "schedule_meeting": {
+        "host_video": false,
+        "participants_video": false,
+        "audio_type": "both",
+        "join_before_host": false,
+        "personal_meeting": true,
+        "use_pmi_for_scheduled_meetings": false,
+        "use_pmi_for_instant_meetings": false,
+        "not_store_meeting_topic": false,
+        "force_pmi_jbh_password": true,
+        "require_password_for_scheduling_new_meetings": true,
+        "require_password_for_instant_meetings": true,
+        "require_password_for_pmi_meetings": "all",
+        "pmi_password": "706862",
+        "pstn_password_protected": true,
+        "mute_upon_entry": false,
+        "embed_password_in_join_link": true
+    },
+    "in_meeting": {
+        "e2e_encryption": false,
+        "chat": true,
+        "private_chat": true,
+        "auto_saving_chat": false,
+        "entry_exit_chime": "none",
+        "record_play_voice": false,
+        "file_transfer": false,
+        "feedback": true,
+        "co_host": false,
+        "attendee_on_hold": false,
+        "show_meeting_control_toolbar": false,
+        "annotation": true,
+        "remote_control": true,
+        "non_verbal_feedback": false,
+        "breakout_room": false,
+        "remote_support": false,
+        "closed_caption": false,
+        "group_hd": false,
+        "virtual_background": true,
+        "far_end_camera_control": false,
+        "custom_data_center_regions": false,
+        "waiting_room": true,
+        "participants_to_place_in_waiting_room": 0,
+        "allow_live_streaming": false
+    },
+    "email_notification": {
+        "jbh_reminder": true,
+        "cancel_meeting_reminder": true
+    },
+    "recording": {
+        "local_recording": true,
+        "auto_recording": "none",
+        "auto_delete_cmr": false,
+        "recording_password_requirement": {
+            "length": 8,
+            "have_letter": true,
+            "have_number": true,
+            "have_special_character": true,
+            "only_allow_numeric": false
+        }
+    },
+    "telephony": {
+        "third_party_audio": false,
+        "audio_conference_info": "",
+        "show_international_numbers_link": true
+    },
+    "tsp": {},
+    "feature": {
+        "meeting_capacity": 100,
+        "large_meeting": false,
+        "webinar": false,
+        "cn_meeting": false,
+        "in_meeting": false,
+        "zoom_phone": false
+    },
+    "integration": {
+        "linkedin_sales_navigator": false
+    }
+}

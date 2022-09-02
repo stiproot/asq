@@ -1,0 +1,18 @@
+.img-preview{
+    height: 200px;
+}
+
+.duration-selector{
+    width:75px;
+}
+
+.start-date{
+    width:200px;
+}
+
+.edit-btn{
+    position:fixed !important;
+    right:50px;
+    bottom:50px;
+    z-index: 1;
+}

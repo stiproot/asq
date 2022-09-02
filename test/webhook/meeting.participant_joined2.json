@@ -1,0 +1,30 @@
+{
+    "event": "meeting.participant_joined",
+    "payload": {
+        "object": {
+            "id": "95234497811",
+            "type": 2,
+            "uuid": "VfjKp4hlRbytUwb8xFOjug==",
+            "topic": "Less Is More - Simplistic Design",
+            "agenda": null,
+            "host_id": "vKPHsmJDT9a1qaHN-dtnWg",
+            "duration": 60,
+            "join_url": null,
+            "password": null,
+            "timezone": "Africa/Johannesburg",
+            "created_at": null,
+            "start_time": "2021-07-26T13:32:19Z",
+            "participant": {
+                "id": "",
+                "user_id": "16780288",
+                "join_time": "2021-07-26T13:34:01Z",
+                "user_name": "Chromebook_FEA7"
+            }
+        },
+        "operator": null,
+        "operation": null,
+        "account_id": "B8FSyXeTRbaJHclERBWBdw",
+        "operator_id": null
+    },
+    "event_ts": 1627306443352
+}

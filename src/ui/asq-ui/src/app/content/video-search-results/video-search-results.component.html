@@ -1,0 +1,8 @@
+<div *ngIf="videos.length > 0">
+    <ul class="container">
+        <li *ngFor="let v of videos" class="item inline-b-item">
+            <app-video-summary [video]="v">
+            </app-video-summary>
+        </li>
+    </ul>
+</div>

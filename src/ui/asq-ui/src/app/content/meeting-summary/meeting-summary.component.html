@@ -1,0 +1,64 @@
+<div class="content-cont"> 
+    <mat-card>
+        <mat-card-header>
+            <div 
+                (mouseover)="onMouseOverProfile()"
+                (mouseout)="onMouseOutProfile()"
+                mat-card-avatar 
+                style="background-image: url({{meeting.creationUserThumbnailUrl}});background-size: cover;">
+            </div>
+            <mat-card-title
+                (mouseover)="onMouseOver()" 
+                (mouseout)="onMouseOut()"
+                [mat-dialog-close]="true"
+                class="pointer-cursor"
+                routerLink='/meeting/{{meeting.uniqueId}}'>
+                {{meeting.title}}
+            </mat-card-title>
+            <mat-card-subtitle 
+                (mouseover)="onMouseOverProfile()"
+                (mouseout)="onMouseOutProfile()"
+                [mat-dialog-close]="true"
+                class="pointer-cursor" 
+                routerLink='/profile/{{meeting.creationUserUniqueId}}'>
+                {{meeting.creationUserName}} '{{meeting.creationUserUsername}}' {{meeting.creationUserSurname}}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-progress-bar class="summary-progress-bar" *ngIf="showProgressBar" mode="indeterminate"></mat-progress-bar>
+        <img 
+            class="pointer-cursor summary-img"
+            routerLink='/meeting/{{meeting.uniqueId}}'
+            (mouseover)="onMouseOver()" 
+            (mouseout)="onMouseOut()"
+            mat-card-image
+            src="{{meeting.thumbnailUrl}}" 
+            alt="{{meeting.title}}">
+        <mat-card-content>
+            <label style="font-size:large;">{{meeting.startDateUtc | date : 'medium'}}</label><br>
+            <label style="font-size:medium;">{{(meeting.estimatedDuration / 60 | number:'1.0-0') + '.' + meeting.estimatedDuration % 60}} Hrs</label><br>
+        </mat-card-content>
+        <mat-card-actions>
+          <button 
+            mat-icon-button 
+            type="button" 
+            color="accent" 
+            (click)="openLectureDetailDialog(meeting.uniqueId)">
+            <mat-icon>open_in_new</mat-icon>
+          </button>
+          <button 
+            style="cursor: default;"
+            *ngIf="meeting.hasPassed"
+            mat-icon-button 
+            type="button">
+            <mat-icon >lock</mat-icon>
+          </button>
+          <button 
+            style="cursor: default;"
+            *ngIf="meeting.hasRecordings"
+            mat-icon-button 
+            type="button">
+            <mat-icon >file_present</mat-icon>
+          </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

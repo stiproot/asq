@@ -1,0 +1,31 @@
+<mat-form-field class="item-list">
+  <mat-chip-list #itemList aria-label="Focus selection">
+    <mat-chip
+      *ngFor="let i of selectedItems"
+      [selectable]="selectable"
+      [removable]="removable"
+      (removed)="removeItem(i)"
+      [disabled]="locked"
+      color="accent">
+      {{i.description}}
+      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+    </mat-chip>
+    <input
+      #itemInput
+      [disabled]="locked"
+      placeholder="{{inputPlaceholder}}"
+      (blur)="inputBlur($event)"
+      [formControl]="formGroup.controls.itemInputCtrl"
+      [matAutocomplete]="auto"
+      [matChipInputAddOnBlur]="true"
+      [matChipInputFor]="itemList"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (matChipInputTokenEnd)="addItem($event)">
+  </mat-chip-list>
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectItem($event)">
+    <mat-option *ngFor="let i of filteredItems$ | async" [value]="i">
+      {{i.description}}
+    </mat-option>
+  </mat-autocomplete>
+  <mat-error>{{requiredError}}</mat-error>
+</mat-form-field>

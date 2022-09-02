@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\models\DTO\DTO.csproj" />
+    <ProjectReference Include="..\..\lib\managers\managers\managers.csproj" />
+    <ProjectReference Include="..\..\lib\processes\processes.csproj" />
+    <ProjectReference Include="..\..\lib\MailClient\MailClient.csproj" />
+    <ProjectReference Include="..\..\lib\Caching\Caching.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+</Project>

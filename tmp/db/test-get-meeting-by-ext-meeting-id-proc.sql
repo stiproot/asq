@@ -1,0 +1,1 @@
+exec dbo.pr_GetMeetingByExtMeetingId @extId = 99695203079

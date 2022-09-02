@@ -1,0 +1,13 @@
+<div class="root-cont">
+  <div class="owl-carousel-cont">
+    <owl-carousel-o [options]="options" #owlC>
+        <ng-template carouselSlide *ngFor="let slide of posts" [id]="slide.id">
+          <app-blog-summary [blog]="slide"></app-blog-summary>
+        </ng-template>
+    </owl-carousel-o>
+  </div>
+  <div style="width:100%">
+    <button class="move-prev" (click)="prev()"><</button>
+    <button class="move-next" (click)="next()">></button>
+  </div>
+</div>

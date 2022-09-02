@@ -1,0 +1,40 @@
+feature
+
+- style meeting detail view
+- style lecture panel view
+- style notifications view
+- style dialog message to be success or failure
+
+- landing/info page
+- footer
+
+- cancel edit button - return to meeting detail
+- persist fab only appears when change is made
+- default timezone pre-selection based on user's default timezone
+- meeting can be edited: no one has registered
+- hover list tiles opens preview view (instead of button)
+- implement blog search
+- meeting advanced search
+- blog advanced search
+- host advanced search
+- remove minutes from meeting start datetime (tiles and detail)
+
+
+bug
+- original meeting creation response payoload not updating (meeting update process)
+- adding new foci when updaing meeting causing break (unique key violation)
+
+
+
+
+-----------------complete---------------------
+- x/default timezone
+- x/test meeting creation
+- x/redirect to lectures upon loggin out
+- x/implement search component
+- x/implement email service
+- x/dialog alert component:
+	account creation successful
+	meeting creation success
+	meeting creation confirmation (can only edit if noone has joined)
+

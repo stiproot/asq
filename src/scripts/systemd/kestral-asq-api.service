@@ -1,0 +1,14 @@
+[Unit]
+Description=ASQ RESTful API 
+
+[Service]
+WorkingDirectory=/home/simon/Code/lab/netcore/api/AsqApi/netcoreapp3.1
+ExecStart=/usr/bin/dotnet /home/simon/Code/lab/netcore/api/AsqApi/netcoreapp3.1/asqapi.dll
+Restart=always
+RestartSec=10
+KillSignal=SIGNINT
+SysLogIdentifier=kestral-asq-api
+Environement=ASPNETCORE_ENVIRONMENT=Production
+
+[Install]
+WantedBy=multi-user.target

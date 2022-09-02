@@ -1,0 +1,22 @@
+Architect
+Plumber
+Electrician 
+Carpenter
+General Contractor
+HMO
+Buy-to-Let
+Developer
+Sourcer
+Planning Consultant
+Quantity Surveyor
+Estate agent
+Rental agent
+Mentor
+Engineer
+Accountant
+Mortgage Broker
+Investor
+Property Solicitor
+Acoustic professional 
+Rent-to-Rent
+Other

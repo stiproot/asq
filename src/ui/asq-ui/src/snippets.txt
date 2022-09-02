@@ -1,0 +1,8 @@
+<!--div 
+    style="z-index: -1; background-size:contain;background-repeat:no-repeat;opacity: 0.1;position: absolute;height:100%;width:100%;" 
+    [style.background]="'url(' + (imgPreviewUrl ? imgPreviewUrl: '') + ')'">
+</div-->
+
+<!--div *ngIf="imgPreviewUrl" style="background:url({{imgPreviewUrl}});height:500px;width:500px;"></div-->
+
+<!--div *ngIf="imgPreviewUrl" style="height:100px;width:100px;" [style.background]="'url(' + (imgPreviewUrl ? imgPreviewUrl: '') + ')'"></div-->

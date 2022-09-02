@@ -1,0 +1,6 @@
+<app-infinite-scroll (scrolled)="onScroll()" class="notification-container">
+    <app-notification *ngFor="let notification of notifications" [notification]="notification"></app-notification>
+    <div *ngIf="isLoading">
+        Fetching notifications...
+    </div>
+</app-infinite-scroll>

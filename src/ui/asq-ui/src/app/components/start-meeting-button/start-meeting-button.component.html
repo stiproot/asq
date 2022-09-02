@@ -1,0 +1,28 @@
+<div
+    fxLayout="column" 
+    fxLayout.lt-sm="column" 
+    fxLayoutGap="10px" 
+    fxLayoutAlign="space-around stretch">
+    <div 
+        fxLayout="row"
+        fxLayoutAlign="start">
+        <button 
+            fxFlex.lt-sm="1 1 100%"
+            fxFlex.gt-md="1 1 10%"
+            *ngIf="isButtonVisible" 
+            mat-raised-button 
+            (click)="onButtonClick($event)"
+            color="accent">{{buttonText}}</button>
+    </div>
+    <div 
+        fxLayout="row"
+        fxLayoutAlign="start">
+        <button 
+            fxFlex.lt-sm="1 1 100%"
+            fxFlex.gt-md="1 1 10%"
+            *ngIf="isButtonVisible" 
+            mat-raised-button 
+            (click)="onZoomButtonClick($event)"
+            color="accent">{{zoomButtonText}}</button>
+    </div>
+</div>

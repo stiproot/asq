@@ -1,0 +1,161 @@
+<mat-dialog-content *ngIf="isDialog">
+    <ng-container *ngTemplateOutlet="detailViewTemplate">
+    </ng-container>
+</mat-dialog-content>
+
+<ng-container *ngIf="!isDialog">
+    <ng-container *ngTemplateOutlet="detailViewTemplate">
+    </ng-container>
+</ng-container>
+
+<ng-template #detailViewTemplate>
+
+    <!--app-back-button></app-back-button-->
+
+    <form [formGroup]="videoInfoGroup">
+
+        <div
+            fxLayout="column" 
+            fxLayout.lt-sm="column" 
+            fxLayoutGap="10px" 
+            fxLayoutAlign="space-around stretch">
+            <div 
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <label 
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    style="text-align:center;font-size:xx-large;"
+                    *ngIf="view">
+                    {{model?.title}}
+                </label>
+                <mat-form-field 
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    *ngIf="edit">
+                    <mat-label>Title</mat-label>
+                    <input 
+                        autoSizeInput
+                        [setParentWidth]="true"
+                        [minWidth]="100"
+                        #title
+                        style="font-size:xx-large;"
+                        maxlength="50"
+                        matInput 
+                        placeholder="Title" 
+                        formControlName="titleCtrl" 
+                        required 
+                        [(ngModel)]="model.title"
+                        [ngModelOptions]="{standalone: true}">
+                    <mat-hint align="end">{{title.value.length}} / 50</mat-hint>
+                    <mat-error *ngIf="videoInfoGroup.get('titleCtrl').hasError('required')">Title required</mat-error>
+                    <mat-error *ngIf="videoInfoGroup.get('titleCtrl').hasError('maxlength')">Title cannot exceed 50 characters</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div 
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <label 
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    style="text-align:center;font-size:25px;"
+                    *ngIf="view">
+                    {{model?.creationUser?.name}} '{{model?.creationUser?.username}}' {{model?.creationUser?.surname}}
+                </label>
+            </div>
+
+            <div 
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <app-img-select
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    [imgPreviewUrl]="model?.img?.url"
+                    (fileChanged)="onImgFileChanged($event)"
+                    [requiredError]="'Video cover image required'"
+                    *ngIf="edit">
+                </app-img-select>
+            </div>
+
+            <div 
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <app-video-select
+                  [requiredError]="'Video required'"
+                  fxFlex.lt-sm="1 1 100%"
+                  fxFlex.gt-md="1 1 50%"
+                  (fileChanged)="onVideoFileChanged($event)"
+                  *ngIf="edit">
+                </app-video-select>
+                <video 
+                  fxFlex.lt-sm="1 1 100%"
+                  fxFlex.gt-md="1 1 50%"
+                  controls 
+                  *ngIf="view"
+                  src="{{model?.vid?.url}}" 
+                  poster="{{model?.img?.url}}" preload="none"> 
+                </video>
+            </div>
+
+            <div
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <app-focus-list 
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    [locked]="view"
+                    [selectedItems]="selectedFocusList"
+                    (updateSelectedItems)="onFocusListUpdate($event)" 
+                    [inputPlaceholder]="'Meeting Focus *'">
+                </app-focus-list>
+            </div>
+
+            <div 
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <h3 
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    *ngIf="view">
+                    {{model?.description}}
+                </h3>
+                <mat-form-field  
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    *ngIf="edit">
+                    <mat-label>Description</mat-label>
+                    <textarea 
+                        #desc
+                        rows="3"
+                        matInput 
+                        placeholder="Description" 
+                        formControlName="descCtrl" 
+                        required 
+                        maxlength="500"
+                        [(ngModel)]="model.description"
+                        [ngModelOptions]="{standalone: true}">
+                    </textarea>
+                    <mat-hint align="end">{{desc.value.length}} / 500</mat-hint>
+                    <mat-error *ngIf="videoInfoGroup.get('descCtrl').hasError('required')">Description required</mat-error>
+                    <mat-error *ngIf="videoInfoGroup.get('descCtrl').hasError('maxlength')">Description cannot exceed 500 characters</mat-error>
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <app-persist-fab
+            *ngIf="isModelValid && edit && !isDialog"
+            (clicked)="onPersistClick($event)">
+        </app-persist-fab>
+        <button 
+            (click)="onEditClick($event)"
+            *ngIf="view && canEdit && !isDialog"
+            mat-fab 
+            type="button"
+            color="accent" 
+            class="edit-btn">
+            <mat-icon>edit</mat-icon>
+        </button>
+    </form>
+</ng-template>

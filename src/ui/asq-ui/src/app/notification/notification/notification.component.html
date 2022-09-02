@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{notification.title}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{notification.imgUrl}}" alt="">
+  <mat-card-content>
+    <p>{{notification.message}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button 
+      (click)="onSeenClick($event)"
+      mat-icon-button 
+      color="accent">
+      <mat-icon>visibility_off</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

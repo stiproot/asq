@@ -1,0 +1,54 @@
+<mat-form-field>
+    <mat-label>Date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="model.startDateUtc" (focus)="picker.open()" readonly>
+</mat-form-field>
+<mat-datepicker #picker></mat-datepicker>
+
+<app-focus-list 
+    [locked]="false"
+    (updateSelectedItems)="onFocusListUpdate($event)" 
+    [inputPlaceholder]="'Focus *'">
+</app-focus-list>
+
+<mat-form-field>
+    <mat-label>Status</mat-label>
+    <mat-select 
+        [(ngModel)]="model.statusId"
+        [disabled]="false">
+        <mat-option [value]="0">SELECT</mat-option>
+        <mat-option [value]="1">AWAITING</mat-option>
+        <mat-option [value]="5">COMPLETE</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>User</mat-label>
+    <input matInput type="text" [(ngModel)]="model.name">
+        <button mat-button *ngIf="model.name" matSuffix mat-icon-button aria-label="Clear" (click)="model.name = ''">
+            <mat-icon>close</mat-icon>
+        </button>
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput type="text" [(ngModel)]="model.title">
+        <button mat-button *ngIf="model.title" matSuffix mat-icon-button aria-label="Clear" (click)="model.title = ''">
+            <mat-icon>close</mat-icon>
+        </button>
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>Description</mat-label>
+    <input matInput type="text" [(ngModel)]="model.description">
+        <button mat-button *ngIf="model.description" matSuffix mat-icon-button aria-label="Clear" (click)="model.description = ''">
+            <mat-icon>close</mat-icon>
+        </button>
+</mat-form-field>
+
+<button 
+    mat-mini-fab 
+    color="accent" 
+    aria-label=""
+    (click)="onSearchClick($event)">
+        <mat-icon>search</mat-icon>
+</button>

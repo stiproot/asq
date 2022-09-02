@@ -1,0 +1,297 @@
+{
+    "Title": "Common Architecture Mistakes",
+    "Description": "You will be surprised at how many architects make these mistakes",
+    "StartDateUtc": "2021-04-30T19:19:38",
+    "EstimatedDuration": 75,
+    "HostId": 2,
+    "MeetingStatusId": 1,
+    "ExMeetingId": 0,
+    "ImgId": 30,
+    "TimezoneId": 81,
+    "CreationUser": {
+        "Username": "siasq",
+        "Password": "stip",
+        "Email": "simon@asq.properties",
+        "Name": "simon",
+        "Surname": "strathern",
+        "PaymentInfoId": 2,
+        "HostId": 2,
+        "ImgId": 2,
+        "TimezoneId": 81,
+        "AccountType": 1,
+        "PaymentInfo": null,
+        "Host": null,
+        "Img": {
+            "Data": "",
+            "FileName": "simon-jangala.jpg",
+            "Path": "http://localhost:3000/image/2e5a8ade-bac6-4ccf-b9f5-538da2f84fa4/e59a2b14-013c-45eb-a355-5e61ec0856aa.jpg",
+            "ThumbnailPath": "http://localhost:3000/image/2e5a8ade-bac6-4ccf-b9f5-538da2f84fa4/e59a2b14-013c-45eb-a355-5e61ec0856aa.jpg",
+            "Id": 2,
+            "UniqueId": "35a59865-35f0-40ae-9029-b929f79da0f3",
+            "CreationDateUtc": "2021-03-20T08:37:05.1",
+            "CreationUserId": 0,
+            "Inactive": false
+        },
+        "Timezone": null,
+        "Interests": [],
+        "Token": null,
+        "Id": 2,
+        "UniqueId": "2e5a8ade-bac6-4ccf-b9f5-538da2f84fa4",
+        "CreationDateUtc": "2021-03-20T08:34:41.043",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "Host": {
+        "Company": "ASQ",
+        "CareerSummary": "Derivco",
+        "ExtUserId": 2,
+        "IsConsultant": false,
+        "Specialities": [
+            {
+                "HostId": 2,
+                "FocusId": 1,
+                "Focus": {
+                    "Description": "Architect",
+                    "Id": 1,
+                    "UniqueId": "3da1246b-5593-4e6d-9175-a1135c4bacb5",
+                    "CreationDateUtc": "2021-03-09T16:19:18.477",
+                    "CreationUserId": 0,
+                    "Inactive": false
+                },
+                "Id": 5,
+                "UniqueId": "6736629d-c9e8-48f2-ac29-df8bcf54a2dc",
+                "CreationDateUtc": "2021-03-20T08:37:43.863",
+                "CreationUserId": 0,
+                "Inactive": false
+            },
+            {
+                "HostId": 2,
+                "FocusId": 8,
+                "Focus": {
+                    "Description": "Developer",
+                    "Id": 8,
+                    "UniqueId": "6ba2d6d6-c20c-48df-9e2a-67123ca29f2f",
+                    "CreationDateUtc": "2021-03-09T16:19:18.487",
+                    "CreationUserId": 0,
+                    "Inactive": false
+                },
+                "Id": 6,
+                "UniqueId": "82c7c47a-7686-4a6a-87f1-1e4c93e4ac1a",
+                "CreationDateUtc": "2021-03-20T08:37:43.863",
+                "CreationUserId": 0,
+                "Inactive": false
+            },
+            {
+                "HostId": 2,
+                "FocusId": 10,
+                "Focus": {
+                    "Description": "Planning Consultant",
+                    "Id": 10,
+                    "UniqueId": "7b1aa249-1ccf-456c-bd68-0f6cb3fba7b3",
+                    "CreationDateUtc": "2021-03-09T16:19:18.487",
+                    "CreationUserId": 0,
+                    "Inactive": false
+                },
+                "Id": 7,
+                "UniqueId": "f5216e54-f91d-4a14-9167-da27b980887f",
+                "CreationDateUtc": "2021-03-20T08:37:43.863",
+                "CreationUserId": 0,
+                "Inactive": false
+            },
+            {
+                "HostId": 2,
+                "FocusId": 14,
+                "Focus": {
+                    "Description": "Mentor",
+                    "Id": 14,
+                    "UniqueId": "a935c01c-b5b4-4cc8-9d8d-cef13ded2133",
+                    "CreationDateUtc": "2021-03-09T16:19:18.49",
+                    "CreationUserId": 0,
+                    "Inactive": false
+                },
+                "Id": 8,
+                "UniqueId": "a63603f6-f6cd-47c4-b3c6-6140e66adfa4",
+                "CreationDateUtc": "2021-03-20T08:37:43.863",
+                "CreationUserId": 0,
+                "Inactive": false
+            },
+            {
+                "HostId": 2,
+                "FocusId": 13,
+                "Focus": {
+                    "Description": "Rental agent",
+                    "Id": 13,
+                    "UniqueId": "ae4b6786-4f8b-4af8-9c65-1bfcb9cb675e",
+                    "CreationDateUtc": "2021-03-09T16:19:18.49",
+                    "CreationUserId": 0,
+                    "Inactive": false
+                },
+                "Id": 9,
+                "UniqueId": "49e4ad3b-1f26-406a-a7a0-722a7a885dc1",
+                "CreationDateUtc": "2021-03-20T08:37:43.863",
+                "CreationUserId": 0,
+                "Inactive": false
+            }
+        ],
+        "ExtUser": null,
+        "Id": 2,
+        "UniqueId": "db7fe06f-6e4b-496a-a496-2961ab0dbb4a",
+        "CreationDateUtc": "2021-03-20T08:34:41.043",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "MeetingStatus": {
+        "Description": "Awaiting",
+        "Id": 1,
+        "UniqueId": "2d90eacf-70db-4cec-92b5-0e6d2b15d70f",
+        "CreationDateUtc": "2021-03-09T16:20:52.757",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "ExtMeeting": {
+        "PayloadSerializer": {
+            "id": 98523193336,
+            "topic": "Common Architecture Mistakes",
+            "type": 2,
+            "start_time": "2021-04-30T19:19:38Z",
+            "duration": 75,
+            "timezone": "Africa/Johannesburg",
+            "created_at": "2021-04-10T19:21:27Z",
+            "agenda": "You will be surprised at how many architects make these mistakes",
+            "start_url": "https://zoom.us/s/98523193336?zak=eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnQiLCJ1aWQiOiJTMHN6dHN4TFJYR2diTjhmTTNyYU1nIiwiaXNzIjoid2ViIiwic3R5Ijo5OSwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJRaEhYQWsxT3pCNXN5SE9rSFBZdmoySkZSSTc4NzBueTV0Yzd3eEh4QnJNLkJnWWdPRGM0V1ZVNFp6Uk1TRm94WkcweGJrVnlTMWRxZWpJNE9Xd3ZiMkZyV2pBQUFBd3pRMEpCZFc5cFdWTXpjejBBQTJGM01RQUFBWGk5TzE3YUFCSjFBQUFBIiwiZXhwIjoxNjI1ODU4NDg4LCJpYXQiOjE2MTgwODI0ODgsImFpZCI6IkI4RlN5WGVUUmJhSkhjbEVSQldCZHciLCJjaWQiOiIifQ.cWypahCq2Kzbodaogk2J4arfg5RvLTqmD_leSaw3o9M",
+            "join_url": "https://zoom.us/j/98523193336",
+            "password": null,
+            "h323_password": null,
+            "pmi": 0,
+            "tracking_fields": null,
+            "settings": {
+                "host_video": true,
+                "participant_video": true,
+                "cn_meeting": false,
+                "in_meeting": false,
+                "join_before_host": true,
+                "mute_upon_entry": true,
+                "watermark": false,
+                "use_pmi": false,
+                "approval_type": 2,
+                "registration_type": 0,
+                "audio": "both",
+                "auto_recording": "none",
+                "alternate_hosts": null,
+                "close_registration": false,
+                "waiting_room": true,
+                "global_dial_in_countries": [
+                    "US"
+                ],
+                "global_dial_in_numbers": [
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 3126266799",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 3462487799",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 6699006833",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 9292056099",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 2532158782",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 3017158592",
+                        "type": "toll"
+                    }
+                ],
+                "contact_name": null,
+                "contact_email": null,
+                "registrants_confirmation_email": true,
+                "registrants_email_notification": false,
+                "meeting_authentication": false,
+                "authentication_option": null,
+                "authentication_domains": null,
+                "additional_data_center_regions": null,
+                "athentication_name": null
+            },
+            "recurrence": null
+        },
+        "Payload": "{\"id\":98523193336,\"topic\":\"Common Architecture Mistakes\",\"type\":2,\"start_time\":\"2021-04-30T19:19:38Z\",\"duration\":75,\"timezone\":\"Africa/Johannesburg\",\"created_at\":\"2021-04-10T19:21:27Z\",\"agenda\":\"You will be surprised at how many architects make these mistakes\",\"start_url\":\"https://zoom.us/s/98523193336?zak=eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnQiLCJ1aWQiOiJTMHN6dHN4TFJYR2diTjhmTTNyYU1nIiwiaXNzIjoid2ViIiwic3R5Ijo5OSwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJRaEhYQWsxT3pCNXN5SE9rSFBZdmoySkZSSTc4NzBueTV0Yzd3eEh4QnJNLkJnWWdPRGM0V1ZVNFp6Uk1TRm94WkcweGJrVnlTMWRxZWpJNE9Xd3ZiMkZyV2pBQUFBd3pRMEpCZFc5cFdWTXpjejBBQTJGM01RQUFBWGk5TzE3YUFCSjFBQUFBIiwiZXhwIjoxNjI1ODU4NDg4LCJpYXQiOjE2MTgwODI0ODgsImFpZCI6IkI4RlN5WGVUUmJhSkhjbEVSQldCZHciLCJjaWQiOiIifQ.cWypahCq2Kzbodaogk2J4arfg5RvLTqmD_leSaw3o9M\",\"join_url\":\"https://zoom.us/j/98523193336\",\"password\":null,\"h323_password\":null,\"pmi\":0,\"tracking_fields\":null,\"settings\":{\"host_video\":true,\"participant_video\":true,\"cn_meeting\":false,\"in_meeting\":false,\"join_before_host\":true,\"mute_upon_entry\":true,\"watermark\":false,\"use_pmi\":false,\"approval_type\":2,\"registration_type\":0,\"audio\":\"both\",\"auto_recording\":\"none\",\"alternate_hosts\":null,\"close_registration\":false,\"waiting_room\":true,\"global_dial_in_countries\":[\"US\"],\"global_dial_in_numbers\":[{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 3126266799\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 3462487799\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 6699006833\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 9292056099\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 2532158782\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 3017158592\",\"type\":\"toll\"}],\"contact_name\":null,\"contact_email\":null,\"registrants_confirmation_email\":true,\"registrants_email_notification\":false,\"meeting_authentication\":false,\"authentication_option\":null,\"authentication_domains\":null,\"additional_data_center_regions\":null,\"athentication_name\":null},\"recurrence\":null}",
+        "Id": 18,
+        "UniqueId": "ad8760b8-df76-46a7-bce2-8000b5de6054",
+        "CreationDateUtc": "2021-04-10T19:21:27.817",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "Img": {
+        "Data": "",
+        "FileName": "leaning-tower-of-piza.jpeg",
+        "Path": "http://localhost:3000/image/2e5a8ade-bac6-4ccf-b9f5-538da2f84fa4/af613d6c-6d2d-42de-9e13-b8cec708a6d7.jpeg",
+        "ThumbnailPath": "http://localhost:3000/image/2e5a8ade-bac6-4ccf-b9f5-538da2f84fa4/af613d6c-6d2d-42de-9e13-b8cec708a6d7.jpeg",
+        "Id": 30,
+        "UniqueId": "88baf5b9-39e7-4bec-8fbd-f5f0b97439b2",
+        "CreationDateUtc": "2021-04-10T19:21:18.993",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "Timezone": {
+        "Display": "Johannesburg",
+        "UtcOffset": 2,
+        "ExtCode": "Africa/Johannesburg",
+        "Id": 81,
+        "UniqueId": "541bc113-7b85-4ba7-98d0-9c08f918f79e",
+        "CreationDateUtc": "2021-03-18T20:49:02.543",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "ExtMeetingWebHooks": [],
+    "Foci": [
+        {
+            "MeetingId": 18,
+            "FocusId": 1,
+            "Focus": {
+                "Description": "Architect",
+                "Id": 1,
+                "UniqueId": "3da1246b-5593-4e6d-9175-a1135c4bacb5",
+                "CreationDateUtc": "2021-03-09T16:19:18.477",
+                "CreationUserId": 0,
+                "Inactive": false
+            },
+            "Id": 23,
+            "UniqueId": "aa732d7a-fe18-4478-a3a6-d2c715193f5d",
+            "CreationDateUtc": "2021-04-10T19:21:20.973",
+            "CreationUserId": 0,
+            "Inactive": false
+        }
+    ],
+    "Participants": [],
+    "Recordings": [],
+    "Id": 18,
+    "UniqueId": "fa2d13f2-b6d1-4cb7-a525-9ceb66bbc2a4",
+    "CreationDateUtc": "2021-04-10T19:19:20.61",
+    "CreationUserId": 2,
+    "Inactive": false
+}

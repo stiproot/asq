@@ -1,0 +1,7 @@
+<button 
+    fxFlex.lt-sm="1 1 100%"
+    fxFlex.gt-md="1 1 10%"
+    *ngIf="isButtonVisible" 
+    mat-raised-button 
+    color="accent" 
+    (click)="onRegisterClick($event)">{{buttonText}}</button>

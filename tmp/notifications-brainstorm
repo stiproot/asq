@@ -1,0 +1,10 @@
+
+notifications:
+
+{
+    title: '',
+    content: '',
+    type: 1,
+    seen: false,
+    url: ''
+}

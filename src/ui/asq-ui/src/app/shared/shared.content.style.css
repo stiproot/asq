@@ -1,0 +1,53 @@
+.root-cont{
+  position: relative;
+}
+
+.content-cont{
+  padding-left: 4px;
+}
+
+.owl-carousel-cont {
+    position:relative;
+}
+
+.owl-prev, .owl-next {
+    position:absolute;
+    z-index: 2;
+    top:calc(50% - 25px);
+}
+
+.owl-prev {
+    left:0;
+}
+
+.owl-next {
+    right:0;
+}
+
+.panel-card{
+  border-radius: 5px !important;
+}
+
+.move-prev, .move-next{
+    z-index: 2;
+    top: calc(50% - 25px);
+    position: absolute;
+    background-color: white;
+}
+
+.move-next{
+  left: 99%;
+}
+
+.summary-progress-bar{
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.summary-img{
+    height: 175px;
+    object-fit: cover;
+    width: 100%;
+    margin: 0;
+}

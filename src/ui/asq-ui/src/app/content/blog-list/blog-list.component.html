@@ -1,0 +1,14 @@
+<div *ngFor="let q of queries">
+    <br/>
+    <h1>{{q.display}}</h1>
+    <app-blog-panel *ngIf="q.data && q.data.length" [posts]="q.data"></app-blog-panel>
+    <br/>
+</div>
+<button 
+    (click)="onNewBlogPostClick($event)"
+    mat-fab 
+    type="button"
+    color="accent" 
+    class="add-blog-post-btn">
+    <mat-icon>add</mat-icon>
+</button>

@@ -1,0 +1,8 @@
+<div *ngIf="blogPosts.length > 0">
+    <ul class="container">
+        <li *ngFor="let b of blogPosts" class="item inline-b-item">
+            <app-blog-summary [blog]="b">
+            </app-blog-summary>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,76 @@
+                // host
+                // user entry -> update tracking | update tracking
+                // create zoom account -> zoom user entry, update tracking | update tracking 
+                //if(accountCreationEvent.user.AccountType == AccountTypeEnu.HOST)
+                //{
+                    ////var user = await _accountManager.GetUser(4);
+                    ////Console.WriteLine(JsonSerializer.Serialize(user));
+
+                    ////Console.WriteLine(_accountManager == null);
+                    //var tracking = await _accountManager.GetAccountCreationTracking(accountCreationEvent.tracking_id);
+                    //Console.WriteLine(JsonSerializer.Serialize(tracking));
+
+                    //Func<Task<EventProcessingResult>> persistUserFunc = async () =>
+                    //{
+                        //await _accountManager.AddUser(accountCreationEvent.user);
+
+                        //return new EventProcessingResult
+                        //{
+                            //Failed = false,
+                            //ExceptionInfo = null,
+                            //Response = null 
+                        //};
+                    //}; 
+
+                    //Func<EventProcessingResult, Task<object>> persistUserSuccessCallbackFunc = async (EventProcessingResult result) => 
+                    //{
+                        //var components = tracking.TrackingComponents;
+                        
+                        //var component = components.FirstOrDefault(tc => tc.identifier.Equals("persist-user"));
+                        
+                        //component.response = result; 
+                        //component.failed = false;
+                        //component.exception_info = null;
+
+                        //tracking.TrackingComponents = components;
+
+                        //Console.WriteLine($"persistUserSuccessCallbackFunc - {JsonSerializer.Serialize(tracking)}");
+
+                        //await _accountManager.UpdateAccountCreationTracking(tracking);
+
+                        //return null;
+                    //};
+
+                    //Func<Exception, Task<object>> persistUserExceptionHandlerFunc = async (Exception exception) => 
+                    //{
+                        //var components = tracking.TrackingComponents;
+                        
+                        //var component = components.FirstOrDefault(tc => tc.identifier.Equals("persist-user"));
+                        
+                        //component.response = null; 
+                        //component.failed = false;
+                        //component.exception_info = new ExceptionDto
+                        //{
+                            //exception = exception,
+                            //inner_exception = exception.InnerException,
+                            //stack = exception.StackTrace
+                        //};
+
+                        //tracking.TrackingComponents = components;
+
+                        //await _accountManager.UpdateAccountCreationTracking(tracking);
+                        //return null;
+                    //};
+
+                    //Action wrappedAction = EventActionFactory.SaftyWrapAction<EventProcessingResult, EventProcessingResult, Object, Object, Object, Exception, Object>
+                    //(
+                        //persistUserFunc, 
+                        //persistUserSuccessCallbackFunc,
+                        //null,
+                        //persistUserExceptionHandlerFunc);
+
+
+                    //Func<Task> f = EventActionFactory.TaskFuncFactory(new List<Action>(){ wrappedAction }, null, null);
+
+                    //await f.Invoke();
+                //}

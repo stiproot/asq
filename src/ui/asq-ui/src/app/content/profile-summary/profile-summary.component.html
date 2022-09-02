@@ -1,0 +1,28 @@
+<div class="content-cont"> 
+    <mat-card class="panel-card">
+        <mat-card-header>
+            <mat-card-title
+                (mouseover)="onMouseOver()" 
+                (mouseout)="onMouseOut()"
+                [mat-dialog-close]="true"
+                class="pointer-cursor"
+                routerLink='/profile/{{host.uniqueId}}'>
+                    {{host.name}} '{{host.username }}' {{host.surname}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-progress-bar class="summary-progress-bar" *ngIf="showProgressBar" mode="indeterminate"></mat-progress-bar>
+        <img 
+            class="pointer-cursor summary-img"
+            (mouseover)="onMouseOver()" 
+            (mouseout)="onMouseOut()"
+            mat-card-image
+            src="{{host.thumbnailUrl}}" 
+            alt="{{host.username}}">
+        <mat-card-actions>
+        <button mat-icon-button type="button" color="accent" (click)="openDetailDialog(host.uniqueId)">
+            <mat-icon>open_in_new</mat-icon>
+        </button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+

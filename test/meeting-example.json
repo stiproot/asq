@@ -1,0 +1,202 @@
+{
+    "Title": "19e63665-759b-4654-8b5a-cedeb479a595 - modified - modified",
+    "Description": "61c2f844-c6f6-4869-8fcd-a3d9a08dfbdf - modified - modified",
+    "StartDateUtc": "2020-11-16T19:37:54.67",
+    "EstimatedDuration": 180,
+    "HostId": 16,
+    "MeetingStatusId": 1,
+    "ExMeetingId": 0,
+    "ImgId": 10025,
+    "Host": {
+        "Company": "I work here",
+        "CareerSummary": "I worked here",
+        "ExtUserId": 6,
+        "Specialities": [
+            {
+                "HostId": 16,
+                "FocusId": 2,
+                "Focus": {
+                    "Description": "Construction",
+                    "Id": 2,
+                    "UniqueId": "73031c91-ecd2-49bf-9850-4847e1484dd3",
+                    "CreationDateUtc": "2020-10-11T14:23:41.453",
+                    "CreationUserId": 0,
+                    "Inactive": false
+                },
+                "Id": 14,
+                "UniqueId": "9d2fdf10-d3d7-4e93-92c6-ad6504e9e6bd",
+                "CreationDateUtc": "2020-10-28T08:50:45.033",
+                "CreationUserId": 0,
+                "Inactive": false
+            }
+        ],
+        "ExtUser": null,
+        "Id": 16,
+        "UniqueId": "dda88c25-e8a6-44dd-a41f-be372170c3d6",
+        "CreationDateUtc": "2020-10-28T08:49:20.607",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "MeetingStatus": {
+        "Description": "Awaiting",
+        "Id": 1,
+        "UniqueId": "a0aa061e-17f0-4c58-ba97-fff0b4a6dba7",
+        "CreationDateUtc": "2020-10-28T16:23:48.44",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "ExtMeeting": {
+        "MeetingId": 0,
+        "PayloadSerializer": {
+            "id": 96755726300,
+            "topic": "19e63665-759b-4654-8b5a-cedeb479a595 - modified - modified",
+            "type": 2,
+            "start_time": "2020-11-16T19:37:54.67",
+            "duration": 180,
+            "timezone": "Africa/Harare",
+            "created_at": "2020-11-07T19:37:57Z",
+            "agenda": "61c2f844-c6f6-4869-8fcd-a3d9a08dfbdf - modified - modified",
+            "start_url": "https://zoom.us/s/96755726300?zak=eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnQiLCJ1aWQiOiI2QTQyS2lENVNvR1ZBMnotcnU5alN3IiwiaXNzIjoid2ViIiwic3R5Ijo5OSwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJCVG53aTdWNVVGNl9scWN3QkdSSGE1VDhYNFd0RENUSHJpdDJETlJzVjFvLkJnVXNhV05yZUVKbFltMXdURW94WkcweGJrVnlTMWRxZVdoT1pFTmtVblJFWlc4NGRqVXJiWGh4U25SaGR6MEFBQXd6UTBKQmRXOXBXVk16Y3owQUEyRjNNUSIsImV4cCI6MTYxMjU1Mzg3NywiaWF0IjoxNjA0Nzc3ODc3LCJhaWQiOiJCOEZTeVhlVFJiYUpIY2xFUkJXQmR3IiwiY2lkIjoiIn0.qVVb0GGG3vd3yMIkFko9xdXszVd9CrPsk-cx3EdljUA",
+            "join_url": "https://zoom.us/j/96755726300",
+            "password": null,
+            "h323_password": null,
+            "pmi": 0,
+            "tracking_fields": null,
+            "settings": {
+                "host_video": true,
+                "participant_video": true,
+                "cn_meeting": false,
+                "in_meeting": false,
+                "join_before_host": true,
+                "mute_upon_entry": true,
+                "watermark": false,
+                "use_pmi": false,
+                "approval_type": 2,
+                "registration_type": 0,
+                "audio": "both",
+                "auto_recording": "none",
+                "alternate_hosts": null,
+                "close_registration": false,
+                "waiting_room": true,
+                "global_dial_in_countries": [
+                    "US"
+                ],
+                "global_dial_in_numbers": [
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 6699006833",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 9292056099",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 2532158782",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 3017158592",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 3126266799",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 3462487799",
+                        "type": "toll"
+                    }
+                ],
+                "contact_name": null,
+                "contact_email": null,
+                "registrants_confirmation_email": true,
+                "registrants_email_notification": false,
+                "meeting_authentication": false,
+                "authentication_option": null,
+                "authentication_domains": null,
+                "additional_data_center_regions": null,
+                "athentication_name": null
+            },
+            "recurrence": null
+        },
+        "Payload": "{\"id\":96755726300,\"topic\":\"19e63665-759b-4654-8b5a-cedeb479a595 - modified - modified\",\"type\":2,\"start_time\":\"2020-11-16T19:37:54.67\",\"duration\":180,\"timezone\":\"Africa/Harare\",\"created_at\":\"2020-11-07T19:37:57Z\",\"agenda\":\"61c2f844-c6f6-4869-8fcd-a3d9a08dfbdf - modified - modified\",\"start_url\":\"https://zoom.us/s/96755726300?zak=eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnQiLCJ1aWQiOiI2QTQyS2lENVNvR1ZBMnotcnU5alN3IiwiaXNzIjoid2ViIiwic3R5Ijo5OSwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJCVG53aTdWNVVGNl9scWN3QkdSSGE1VDhYNFd0RENUSHJpdDJETlJzVjFvLkJnVXNhV05yZUVKbFltMXdURW94WkcweGJrVnlTMWRxZVdoT1pFTmtVblJFWlc4NGRqVXJiWGh4U25SaGR6MEFBQXd6UTBKQmRXOXBXVk16Y3owQUEyRjNNUSIsImV4cCI6MTYxMjU1Mzg3NywiaWF0IjoxNjA0Nzc3ODc3LCJhaWQiOiJCOEZTeVhlVFJiYUpIY2xFUkJXQmR3IiwiY2lkIjoiIn0.qVVb0GGG3vd3yMIkFko9xdXszVd9CrPsk-cx3EdljUA\",\"join_url\":\"https://zoom.us/j/96755726300\",\"password\":null,\"h323_password\":null,\"pmi\":0,\"tracking_fields\":null,\"settings\":{\"host_video\":true,\"participant_video\":true,\"cn_meeting\":false,\"in_meeting\":false,\"join_before_host\":true,\"mute_upon_entry\":true,\"watermark\":false,\"use_pmi\":false,\"approval_type\":2,\"registration_type\":0,\"audio\":\"both\",\"auto_recording\":\"none\",\"alternate_hosts\":null,\"close_registration\":false,\"waiting_room\":true,\"global_dial_in_countries\":[\"US\"],\"global_dial_in_numbers\":[{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 6699006833\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 9292056099\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 2532158782\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 3017158592\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 3126266799\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 3462487799\",\"type\":\"toll\"}],\"contact_name\":null,\"contact_email\":null,\"registrants_confirmation_email\":true,\"registrants_email_notification\":false,\"meeting_authentication\":false,\"authentication_option\":null,\"authentication_domains\":null,\"additional_data_center_regions\":null,\"athentication_name\":null},\"recurrence\":null}",
+        "Id": 10003,
+        "UniqueId": "1881fb28-b778-4c67-a113-48bc1a188056",
+        "CreationDateUtc": "2020-11-07T19:37:57.397",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "Img": {
+        "Data": "",
+        "Base64": null,
+        "FileName": "profile.png",
+        "Path": "317bca08-51b8-41fa-a0e2-b646655b5923/3b49f851-3653-46a6-abd9-ad1677a00c94.png",
+        "ThumbnailPath": "317bca08-51b8-41fa-a0e2-b646655b5923/3b49f851-3653-46a6-abd9-ad1677a00c94.png",
+        "Id": 10025,
+        "UniqueId": "1c8c2d9c-3d29-4acf-aa89-6b8ad8fc0609",
+        "CreationDateUtc": "2020-11-07T19:37:54.67",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "ExtZoomWebHookDto": [],
+    "Foci": [
+        {
+            "MeetingId": 10006,
+            "FocusId": 1,
+            "Focus": {
+                "Description": "Housing & Deveopment",
+                "Id": 1,
+                "UniqueId": "87792284-e67c-4f2d-8822-7a2ee4a6d458",
+                "CreationDateUtc": "2020-10-11T14:23:40.973",
+                "CreationUserId": 0,
+                "Inactive": false
+            },
+            "Id": 10004,
+            "UniqueId": "75c95cfd-9309-4a1a-837d-1351e16ad3c6",
+            "CreationDateUtc": "2020-11-07T19:37:54.67",
+            "CreationUserId": 0,
+            "Inactive": false
+        },
+        {
+            "MeetingId": 10006,
+            "FocusId": 2,
+            "Focus": {
+                "Description": "Construction",
+                "Id": 2,
+                "UniqueId": "73031c91-ecd2-49bf-9850-4847e1484dd3",
+                "CreationDateUtc": "2020-10-11T14:23:41.453",
+                "CreationUserId": 0,
+                "Inactive": false
+            },
+            "Id": 10005,
+            "UniqueId": "5ba12f2d-8db2-4496-8b06-d9ba37444585",
+            "CreationDateUtc": "2020-11-07T19:37:54.67",
+            "CreationUserId": 0,
+            "Inactive": false
+        }
+    ],
+    "Participants": [],
+    "Id": 10006,
+    "UniqueId": "0d177281-1d85-4230-8d46-326ca590ed9f",
+    "CreationDateUtc": "2020-11-07T19:37:54.67",
+    "CreationUserId": 0,
+    "Inactive": false
+}

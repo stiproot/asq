@@ -1,0 +1,13 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Advanced Search</mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-search-criteria 
+      (searchCriteriaFilterClick)="onSearchCriteriaFilterClick($event)">
+    </app-search-criteria>
+</mat-expansion-panel>
+
+<div *ngIf="meetings.length > 0">
+  <app-meeting-search-results [meetings]="meetings">
+  </app-meeting-search-results>
+</div>

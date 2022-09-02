@@ -1,0 +1,82 @@
+<form [formGroup]="loginGroup">
+    <div
+        fxLayout="column" 
+        fxLayout.lt-sm="column" 
+        fxLayoutGap="10px" 
+        fxLayoutAlign="space-around stretch">
+        <div 
+            fxLayout="row"
+            fxLayoutAlign="center center">
+            <div 
+                fxFlex.lt-sm="1 1 100%"
+                fxFlex.gt-md="1 1 50%">
+                <div
+                    fxLayout="column" 
+                    fxLayout.lt-sm="column" 
+                    fxLayoutGap="10px" 
+                    fxLayoutAlign="space-around stretch">
+
+                    <div 
+                        fxLayout="row wrap" 
+                        fxLayout.lt-sm="column" 
+                        fxLayoutGap="32px" 
+                        fxLayoutAlign="flex-start">
+                        <mat-form-field
+                                fxFlex="0 1 calc(50% - 32px)"
+                                fxFlex.lt-md="0 1 calc(50% - 32px)"
+                                fxFlex.lt-sm="100%">
+                            <mat-label>Username or Email</mat-label>
+                            <input matInput 
+                                placeholder="Username" 
+                                formControlName="usernameCtrl" 
+                                required 
+                                [(ngModel)]="username">
+                            <mat-error *ngIf="loginGroup.get('usernameCtrl').hasError('required')">Username or Email required</mat-error>
+                            <mat-error *ngIf="loginGroup.get('usernameCtrl').hasError('maxlength')">Username or Email cannot exceed 50 characters</mat-error>
+                            <!--mat-error *ngIf="loginGroup.get('usernameCtrl').hasError('pattern')">Username can only contain alphabet characters</mat-error-->
+                        </mat-form-field>
+
+                        <mat-form-field
+                                fxFlex="0 1 calc(50% - 32px)"
+                                fxFlex.lt-md="0 1 calc(50% - 32px)"
+                                fxFlex.lt-sm="100%">
+                            <mat-label>Password</mat-label>
+                            <input 
+                                (keyup.enter)="login()"
+                                matInput 
+                                placeholder="Password" 
+                                formControlName="pwdCtrl" 
+                                required 
+                                maxlength="50" 
+                                [type]="hidePwd ? 'password' : 'text'" 
+                                [(ngModel)]="password">
+                            <button mat-icon-button matSuffix (click)="hidePwd = !hidePwd" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePwd">
+                            <mat-icon>{{hidePwd ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                            <mat-error *ngIf="loginGroup.get('pwdCtrl').hasError('required')">Password required</mat-error>
+                            <mat-error *ngIf="loginGroup.get('pwdCtrl').hasError('maxlength')">Password cannot exceed 25 characters</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div 
+                        fxLayout="row wrap" 
+                        fxLayout.lt-sm="column" 
+                        fxLayoutGap="32px" 
+                        fxLayoutAlign="flex-start">
+
+                        <button 
+                            fxFlex="0 1 calc(50% - 32px)"
+                            fxFlex.lt-md="0 1 calc(50% - 32px)"
+                            fxFlex.lt-sm="100%"
+                            mat-raised-button 
+                            (click)="login()">Login</button>
+                        <a 
+                            fxFlex="0 1 calc(50% - 32px)"
+                            fxFlex.lt-md="0 1 calc(50% - 32px)"
+                            fxFlex.lt-sm="100%"
+                            mat-flat-button [routerLink]="['/account']" queryParamsHandling="merge">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

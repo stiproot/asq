@@ -1,0 +1,13 @@
+[Unit]
+Description=ASQ mail worker service
+
+[Service]
+WorkingDirectory=/home/simon/Code/lab/netcore/workers/AsqMailWorker/netcoreapp3.1
+ExecStart=/usr/bin/dotnet /home/simon/Code/lab/netcore/workers/AsqMailWorker/netcoreapp3.1/EventEngine.dll
+Restart=always
+RestartSec=10
+KillSignal=SIGNINT
+SysLogIdentifier=asq-mail-worker
+
+[Install]
+WantedBy=multi-user.target

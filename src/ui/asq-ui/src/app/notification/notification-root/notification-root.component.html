@@ -1,0 +1,17 @@
+<button
+    mat-icon-button
+    matBadge="{{notifications ? notifications.length: 0}}"
+    matBadgeColor="warn"
+    [matMenuTriggerFor]="notificationMenu">
+    <mat-icon>notifications</mat-icon>
+</button>
+<mat-menu 
+    #notificationMenu="matMenu">
+    <div class="notification-list-container">
+        <app-notification-list
+            [notifications]="notifications"
+            (seenClicked)="onSeenClicked($event)"
+            (scrolled)="onScroll()">
+        </app-notification-list>
+    </div>
+</mat-menu>

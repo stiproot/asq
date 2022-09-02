@@ -1,0 +1,26 @@
+## node ###
+ logs
+logs/
+*.log
+
+# build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]eleases/
+x64/
+x68/
+build/
+bld/
+bin/
+[Oo]bj/
+/[Bb]uild
+/[Cc]onfig
+/[Dd]ist
+/[Ll]ogs
+/[Bb]uild[Ll]ogs
+[Pp]packages/
+/*.log
+
+/server/public/image/
+/server/public/video/
+

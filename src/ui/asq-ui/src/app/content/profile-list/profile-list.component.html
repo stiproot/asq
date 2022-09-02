@@ -1,0 +1,6 @@
+<div *ngFor="let q of queries">
+    <br/>
+    <h1>{{q.display}}</h1>
+    <app-profile-panel *ngIf="q.data && q.data.length" [hosts]="q.data"></app-profile-panel>
+    <br/>
+</div>

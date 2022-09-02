@@ -1,0 +1,83 @@
+<mat-toolbar color="accent">
+    <div 
+        fxLayout="row nowrap"
+        fxLayoutAlign="space-between center"
+        style="width:100%">
+        <div 
+            fxLayout="row nowrap"
+            fxLayoutAlign="start center"
+            fxLayoutGap="10px">
+            <div 
+                fxHide.gt-xs
+                fxFlex>
+                <button mat-icon-button (click)="onToggleSidenav()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div 
+                fxFlex>
+                <h3 routerLink="/meetings">asq</h3>
+            </div>
+            <div fxFlex *ngIf="authService.isLoggedIn">
+                <a class="pointer-cursor" fxHide.xs (click)="navigate('/videos')">videos</a>
+            </div>
+            <div fxFlex *ngIf="authService.isLoggedIn">
+                <a class="pointer-cursor" fxHide.xs (click)="navigate('/meetings')">meetings</a>
+            </div>
+            <div fxFlex *ngIf="authService.isLoggedIn">
+                <a class="pointer-cursor" fxHide.xs (click)="navigate('/blog-posts')">blog-posts</a>
+            </div>
+            <div fxFlex *ngIf="authService.isLoggedIn">
+                <a class="pointer-cursor" fxHide.xs (click)="navigate('/hosts')">hosts</a>
+            </div>
+         </div>
+
+         <div 
+            fxLayout="row"
+            fxLayoutAlign="end center">
+            <div 
+                *ngIf="authService.isLoggedIn"
+                fxFlex 
+                fxHide.xs>
+                <mat-form-field>
+                    <mat-icon matPrefix>search</mat-icon>
+                    <input 
+                        (keyup)="onSearchChange()"
+                        matInput 
+                        type="text" 
+                        placeholder="search"
+                        [(ngModel)]="searchString">
+                    <button 
+                        mat-button 
+                        *ngIf="searchString" 
+                        matSuffix 
+                        mat-icon-button 
+                        aria-label="Clear" 
+                        (click)="onSearchClearClick()">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div dvFlex>
+                <a *ngIf="!authService.isLoggedIn" [routerLink]="['/login']" [queryParams]="{continue: 'videos'}">login</a>
+                <app-notification-root *ngIf="authService.isLoggedIn"></app-notification-root>
+            </div>
+            <div fxFlex *ngIf="authService.isLoggedIn">
+                <div [matMenuTriggerFor]="menu" class="pointer-cursor">
+                    <img class="avatar" src="{{authService.userValue?.img?.url}}">
+                </div>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item *ngIf="authService.isHost" (click)="onProfileClick($event)" routerLinkActive="active">
+                        <span>Profile</span>
+                    </button>
+                    <button mat-menu-item routerLink="/account" routerLinkActive="active">
+                        <span>Account</span>
+                    </button>
+                    <button mat-menu-item *ngIf="authService.isLoggedIn || true" (click)="authService.logout()">
+                        <span>Logout</span>
+                    </button>
+                </mat-menu>
+            </div>
+         </div>
+    </div>
+  </mat-toolbar>

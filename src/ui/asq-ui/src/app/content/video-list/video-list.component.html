@@ -1,0 +1,15 @@
+<div *ngFor="let q of queries">
+    <br/>
+    <h1>{{q.display}}</h1>
+    <app-video-panel *ngIf="q.data$ | async as data" [videos]="data"></app-video-panel>
+    <br/>
+</div>
+<button 
+    *ngIf="isAddButtonVisible"
+    (click)="onAddVideoClick($event)"
+    mat-fab 
+    type="button"
+    color="accent" 
+    class="add-video-btn">
+    <mat-icon>add</mat-icon>
+</button>

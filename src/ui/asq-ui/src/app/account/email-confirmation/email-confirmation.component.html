@@ -1,0 +1,2 @@
+<p>{{activationMessage}}</p>
+<a *ngIf="activationMessage" [routerLink]="['/login']" [queryParams]="{continue: '/videos'}">login</a>

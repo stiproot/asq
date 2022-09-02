@@ -1,0 +1,18 @@
+<mat-form-field style="width: 100%;">
+    <mat-label>Timezone</mat-label>
+    <mat-select 
+        style="width: 100%;"
+        [(ngModel)]="selectedTimezoneId"
+        [formControl]="formGroup.controls.timezoneCtrl" 
+        (selectionChange)="onTimezoneSelectionChange($event)"
+        required
+        [disabled]="locked">
+        <mat-option>select</mat-option>
+        <mat-option 
+            *ngFor="let t of data" 
+            [value]="t.id">
+            {{t.display}}
+        </mat-option>
+    </mat-select>
+    <mat-error *ngIf="formGroup.get('timezoneCtrl').hasError('required')">Timezone required</mat-error>
+</mat-form-field>

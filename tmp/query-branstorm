@@ -1,0 +1,71 @@
+problem statement:
+Lecture data needs to be fetched based on whether the user is logged in or not.
+
+Where should the queries be defined? The client? The server?
+
+CATEGORY DIMENSION:
+time:
+- upcoming
+- retrospective
+position:
+- country
+experience:
+- highly rated
+- foci 
+
+QUERIES:
+
+logged in:
+- your chosen interests (foci)
+- lectures by same lecturer that you rated high (personality) 
+- lectures that you attended and rated high (retrospective)
+- lectures that are popular in your country
+
+not logged in:
+- available categories (foci)
+- lectures with the most participants (popularity)
+- lectures by lecturers that the most highly rated (personality)
+
+
+DESIGN:
+
+endpoints that processes with multiple query params
+
+1. lecture search points: 
+    - foci
+    - status
+    - start date
+    - duration
+    - timezone
+    - number of participants
+
+2. predictive lecture search: 
+    - rating
+        - lectures created by a lecturer that you rated high
+        - lectures on topics that you rated high
+
+
+lecture_panels: [
+    panel: {
+        query: {
+            display: '',
+            config:{
+                
+            }
+        },
+        data: []
+    }
+]
+
+
+There could be a grouping of panels.
+Each grouping has a category like 'predictive'
+
+
+QUESTIONS:
+
+- would a single endpoint be able to include searches for "abstract" searches, like lectures by the same lecturer?
+
+
+
+

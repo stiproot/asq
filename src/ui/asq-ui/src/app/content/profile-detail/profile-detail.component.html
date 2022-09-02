@@ -1,0 +1,86 @@
+<mat-dialog-content *ngIf="isDialog">
+    <ng-container *ngTemplateOutlet="detailViewTemplate">
+    </ng-container>
+</mat-dialog-content>
+
+<ng-container *ngIf="!isDialog">
+    <ng-container *ngTemplateOutlet="detailViewTemplate">
+    </ng-container>
+</ng-container>
+
+<ng-template #detailViewTemplate>
+
+    <!--app-back-button></app-back-button-->
+  <div
+      fxLayout="column" 
+      fxLayout.lt-sm="column" 
+      fxLayoutGap="10px" 
+      fxLayoutAlign="space-around stretch">
+
+      <div 
+          fxLayout="row"
+          fxLayoutAlign="center center">
+          <img 
+              fxFlex.lt-sm="1 1 100%"
+              fxFlex.gt-md="1 1 500px%"
+              src="{{user?.img?.path}}">
+      </div>
+
+      <div 
+          fxLayout="row"
+          fxLayoutAlign="center center">
+          <label 
+              fxFlex.lt-sm="1 1 100%"
+              fxFlex.gt-md="1 1 50%"
+              style="text-align:center;font-size:25px;">
+              {{user?.name}} '{{user?.username}}' {{user?.surname}}
+          </label>
+      </div>
+
+      <div
+          fxLayout="row"
+          fxLayoutAlign="center center">
+          <app-focus-list 
+            *ngIf="specialities"
+            fxFlex.lt-sm="1 1 100%"
+            fxFlex.gt-md="1 1 50%"
+            [locked]="true"
+            [selectedItems]="specialities"
+            [inputPlaceholder]="'Specialities *'">
+          </app-focus-list>
+      </div>
+
+      <div
+          fxLayout="row"
+          fxLayoutAlign="center center">
+          <app-focus-list 
+            *ngIf="interests"
+            fxFlex.lt-sm="1 1 100%"
+            fxFlex.gt-md="1 1 50%"
+            [locked]="true"
+            [selectedItems]="interests"
+            [inputPlaceholder]="'Interests *'">
+          </app-focus-list>
+      </div>
+    
+    <br>
+
+    <mat-tab-group animationDuration="0ms">
+        <mat-tab label="Videos">
+            <app-video-list-query-provider [inputCreationUserUniqueId]="id"></app-video-list-query-provider>
+        </mat-tab>
+        <mat-tab label="Meetings">
+            <ng-template matTabContent>
+                <app-meeting-list-query-provider [inputHostId]="id"></app-meeting-list-query-provider>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Blog Posts">
+            <ng-template matTabContent>
+                <app-blog-list-query-provider [inputCreationUserUniqueId]="id"></app-blog-list-query-provider>
+            </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+
+  </div>
+
+</ng-template>

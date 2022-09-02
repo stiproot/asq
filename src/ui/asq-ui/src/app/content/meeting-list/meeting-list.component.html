@@ -1,0 +1,15 @@
+<div *ngFor="let q of queries">
+    <br/>
+    <h1>{{q.display}}</h1>
+    <app-meeting-panel *ngIf="q.data$ | async as data" [meetings]="data"></app-meeting-panel>
+    <br/>
+</div>
+<button 
+    *ngIf="isAddButtonVisible"
+    (click)="onAddLectureClick($event)"
+    mat-fab 
+    type="button"
+    color="accent" 
+    class="add-meeting-btn">
+    <mat-icon>add</mat-icon>
+</button>

@@ -1,0 +1,30 @@
+{
+    "username": "b17147a6-a5f5-4c3d-bb80-9",
+    "password": "fb97cebb-7a7f-4482-950e-1b310edc0aff",
+    "email": "d51728e0-d4ea-42b6-8686-d3091fb09e9c@test.com",
+    "name": "e7aef5d4-73d5-4ab6-877b-da1188ff278e",
+    "surname": "14daf6e6-1dd2-4b8c-91b6-6d6e227a0f60",
+    "accountType": 1,
+    "interests": [
+        {
+            "userId": 26,
+            "focus": {
+                "description": "construction",
+                "id": 1,
+                "uniqueId": "3f4eba8b-51ba-47a4-9eaf-29a3958eb3d7",
+                "creationDateUTC": "0001-01-01T00:00:00"
+            },
+            "focusId": 1,
+            "inActive": false,
+            "id": 16,
+            "uniqueId": "00000000-0000-0000-0000-000000000000",
+            "creationDateUTC": "0001-01-01T00:00:00"
+        }
+    ],
+    "host": [],
+    "bankingInfo": [],
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjI2Iiwicm9sZSI6IkhPU1QiLCJuYmYiOjE2MDA4NzI3NjgsImV4cCI6MTYwMDk1OTE2OCwiaWF0IjoxNjAwODcyNzY4fQ.FbBQENEWRqPcU75yLE201o6Niseek6BFkeRZjIs1a0g",
+    "id": 26,
+    "uniqueId": "faaa60f5-788b-4cea-9834-5d3e6d5d0c13",
+    "creationDateUTC": "2020-08-05T12:28:53.99"
+}

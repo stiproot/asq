@@ -1,0 +1,9 @@
+<div *ngIf="users.length > 0">
+    <ul class="container">
+        <li *ngFor="let u of users" class="item inline-b-item">
+            <app-profile-summary [host]="u">
+            </app-profile-summary>
+        </li>
+    </ul>
+</div>
+

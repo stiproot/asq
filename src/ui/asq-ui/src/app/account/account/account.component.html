@@ -1,0 +1,348 @@
+<mat-horizontal-stepper #stepper>
+  <mat-step [stepControl]="basicInfoGroup" errorMessage="{{basicInfoSummaryError}}">
+    <form [formGroup]="basicInfoGroup">
+      <ng-template matStepLabel>Basic Information</ng-template>
+
+      <mat-form-field floatLabel="always" appearance="none">
+        <mat-label>Account Type</mat-label>
+        <mat-slide-toggle 
+          matInput 
+          formControlName="accTypeCtrl" 
+          [(ngModel)]="model.isHost" 
+          (toggleChange)="onAccountTypeToggleChange($event)">{{model?.isHost ? 'Host' : 'Student'}}</mat-slide-toggle>
+        <textarea matInput hidden></textarea>
+      </mat-form-field>
+
+      <br>
+
+      <div 
+        fxLayout="row wrap" 
+        fxLayout.lt-sm="column" 
+        fxLayoutGap="32px" 
+        fxLayoutAlign="flex-start">
+        <div
+          fxFlex="0 1 calc(100% - 32px)"
+          fxFlex.lt-md="0 1 calc(100% - 32px)"
+          fxFlex.lt-sm="100%">
+          <app-focus-list
+            [locked]="false"
+            [selectedItems]="selectedInterests"
+            (updateSelectedItems)="onInterestFocusListUpdate($event)" 
+            [inputPlaceholder]="'Interests *'"
+            [requiredError]="'Interests required'">
+          </app-focus-list>
+        </div>
+      </div>
+
+      <br>
+
+      <div 
+        fxLayout="row wrap" 
+        fxLayout.lt-sm="column" 
+        fxLayoutGap="32px" 
+        fxLayoutAlign="flex-start">
+        <mat-form-field
+          fxFlex="0 1 calc(50% - 32px)"
+          fxFlex.lt-md="0 1 calc(50% - 32px)"
+          fxFlex.lt-sm="100%">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Username" formControlName="usernameCtrl" required [(ngModel)]="model.username">
+          <mat-error *ngIf="basicInfoGroup.get('usernameCtrl').hasError('required')">Username required</mat-error>
+          <mat-error *ngIf="basicInfoGroup.get('usernameCtrl').hasError('maxlength')">Username cannot exceed 25 characters</mat-error>
+          <mat-error *ngIf="basicInfoGroup.get('usernameCtrl').hasError('pattern')">Username can only contain alphabet characters</mat-error>
+        </mat-form-field>
+
+        <mat-form-field
+          fxFlex="0 1 calc(50% - 32px)"
+          fxFlex.lt-md="0 1 calc(50% - 32px)"
+          fxFlex.lt-sm="100%">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" formControlName="emailCtrl" required [(ngModel)]="model.email">
+          <mat-error *ngIf="basicInfoGroup.get('emailCtrl').hasError('required')">Email required</mat-error>
+          <mat-error *ngIf="basicInfoGroup.get('emailCtrl').hasError('email')">Valid email required</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div 
+        fxLayout="row wrap" 
+        fxLayout.lt-sm="column" 
+        fxLayoutGap="32px" 
+        fxLayoutAlign="flex-start">
+        <mat-form-field
+          fxFlex="0 1 calc(50% - 32px)"
+          fxFlex.lt-md="0 1 calc(50% - 32px)"
+          fxFlex.lt-sm="100%">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Name" formControlName="nameCtrl" required maxlength="25" [(ngModel)]="model.name">
+          <mat-error *ngIf="basicInfoGroup.get('nameCtrl').hasError('required')">Name required</mat-error>
+          <mat-error *ngIf="basicInfoGroup.get('nameCtrl').hasError('maxlength')">Name cannot exceed 25 characters</mat-error>
+          <mat-error *ngIf="basicInfoGroup.get('nameCtrl').hasError('pattern')">Name can only contain alphabet characters</mat-error>
+        </mat-form-field>
+
+        <mat-form-field
+          fxFlex="0 1 calc(50% - 32px)"
+          fxFlex.lt-md="0 1 calc(50% - 32px)"
+          fxFlex.lt-sm="100%">
+          <mat-label>Surname</mat-label>
+          <input matInput placeholder="Surname" formControlName="surnameCtrl" required maxlength="25" [(ngModel)]="model.surname">
+          <mat-error *ngIf="basicInfoGroup.get('surnameCtrl').hasError('required')">Surname required</mat-error>
+          <mat-error *ngIf="basicInfoGroup.get('surnameCtrl').hasError('maxlength')">Surname cannot exceed 25 characters</mat-error>
+          <mat-error *ngIf="basicInfoGroup.get('surnameCtrl').hasError('pattern')">Surname can only contain alphabet characters</mat-error>
+        </mat-form-field>
+      </div>
+
+      <br>
+      
+      <div 
+        fxLayout="row wrap" 
+        fxLayout.lt-sm="column" 
+        fxLayoutGap="32px" 
+        fxLayoutAlign="flex-start">
+        <div
+          fxFlex="0 1 calc(50% - 32px)"
+          fxFlex.lt-md="0 1 calc(50% - 32px)"
+          fxFlex.lt-sm="100%">
+          <app-timezone-select
+            [locked]="false"
+            [selectedTimezoneId]="model?.timezoneId"
+            (timezoneSelectionChange)="onTimezoneSelectionChange($event)">
+          </app-timezone-select>
+        </div>
+      </div>
+
+      <div 
+          fxLayout="row wrap" 
+          fxLayout.lt-sm="column" 
+          fxLayoutGap="32px" 
+          fxLayoutAlign="flex-start">
+        <mat-form-field
+          fxFlex="0 1 calc(50% - 32px)"
+          *ngIf="!hidePwdCtrls"
+          fxFlex.lt-md="0 1 calc(50% - 32px)"
+          fxFlex.lt-sm="100%">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password" formControlName="pwdCtrl" required maxlength="25" [type]="hidePwdText ? 'password' : 'text'" [(ngModel)]="model.password">
+          <button mat-icon-button matSuffix (click)="hidePwdText = !hidePwdText" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePwdText">
+            <mat-icon>{{hidePwdText ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="basicInfoGroup.get('pwdCtrl').hasError('required')">Password required</mat-error>
+          <mat-error *ngIf="basicInfoGroup.get('pwdCtrl').hasError('maxlength')">Password cannot exceed 25 characters</mat-error>
+        </mat-form-field>
+
+        <!--mat-form-field
+          *ngIf="!hidePwdCtrls"
+          fxFlex="0 1 calc(50% - 32px)"
+          fxFlex.lt-md="0 1 calc(50% - 32px)"
+          fxFlex.lt-sm="100%">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput placeholder="Confirm Password" formControlName="pwdConfirmCtrl" required maxlength="25" [type]="hidePwdConfirmText ? 'password' : 'text'" [(ngModel)]="model.passwordConfirm" pattern="{{model.password}}">
+          <button mat-icon-button matSuffix (click)="hidePwdConfirmText = !hidePwdConfirmText" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePwdConfirmText">
+            <mat-icon>{{hidePwdConfirmText ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="basicInfoGroup.get('pwdConfirmCtrl').hasError('required')">Password confirmation required</mat-error>
+          <mat-error *ngIf="basicInfoGroup.get('pwdConfirmCtrl').hasError('pattern')">Passwords do not match</mat-error>
+          <mat-error *ngIf="basicInfoGroup.get('pwdConfirmCtrl').hasError('maxlength')">Password confirmation cannot exceed 25 characters</mat-error>
+        </mat-form-field-->
+        <div
+          fxFlex="0 1 calc(100% - 32px)"
+          fxFlex.lt-md="0 1 calc(100% - 32px)"
+          fxFlex.lt-sm="100%"
+          *ngIf="isEditOp">
+          <button mat-raised-button (click)="hidePwdCtrls = !hidePwdCtrls">{{!hidePwdCtrls ? 'cancel' : 'change password'}}</button>
+        </div>
+      </div>
+
+      <br>
+
+      <div 
+        fxLayout="row wrap" 
+        fxLayout.lt-sm="column" 
+        fxLayoutGap="32px" 
+        fxLayoutAlign="flex-start">
+        <div
+          fxFlex="0 1 calc(25% - 32px)"
+          fxFlex.lt-md="0 1 calc(25% - 32px)"
+          fxFlex.lt-sm="100%">
+          <app-img-select
+            [imgPreviewUrl]="model?.img?.url"
+            (fileChanged)="onFileChanged($event)"
+            [requiredError]="'Profile image required'">
+          </app-img-select>
+        </div>
+      </div>
+      <br>
+
+      <div>
+        <button mat-stroked-button matStepperNext>Next</button>
+      </div>
+
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="hostInfoGroup" *ngIf="model.isHost" errorMessage="{{hostInfoSummaryError}}">
+    <form [formGroup]="hostInfoGroup">
+      <ng-template matStepLabel>Host Information</ng-template>
+
+      <div 
+          fxLayout="row wrap" 
+          fxLayout.lt-sm="column" 
+          fxLayoutGap="32px" 
+          fxLayoutAlign="flex-start">
+        <mat-form-field
+              fxFlex="0 1 calc(100% - 32px)"
+              fxFlex.lt-md="0 1 calc(100% - 32px)"
+              fxFlex.lt-sm="100%">
+          <mat-label>Company</mat-label>
+          <input matInput placeholder="Company" formControlName="companyCtrl" required [(ngModel)]="model.host.company">
+          <mat-error *ngIf="hostInfoGroup.get('companyCtrl').hasError('required')">Summary required</mat-error>
+          <mat-error *ngIf="hostInfoGroup.get('companyCtrl').hasError('maxlength')">Company cannot exceed 50 characters</mat-error>
+        </mat-form-field>
+      </div>
+      <br>
+      <div 
+          fxLayout="row wrap" 
+          fxLayout.lt-sm="column" 
+          fxLayoutGap="32px" 
+          fxLayoutAlign="flex-start">
+
+        <mat-form-field
+              fxFlex="0 1 calc(100% - 32px)"
+              fxFlex.lt-md="0 1 calc(100% - 32px)"
+              fxFlex.lt-sm="100%">
+
+          <mat-label>Career Summary</mat-label>
+          <textarea 
+            #careerSummary
+            rows="3"
+            matInput 
+            placeholder="Career Summary" 
+            formControlName="summaryCtrl" 
+            required 
+            maxlength="500"
+            [(ngModel)]="model.host.careerSummary"
+            [ngModelOptions]="{standalone: true}">
+          </textarea>
+          <mat-hint align="end">{{careerSummary.value.length}} / 500</mat-hint>
+          <mat-error *ngIf="hostInfoGroup.get('summaryCtrl').hasError('required')">Summary required</mat-error>
+          <mat-error *ngIf="hostInfoGroup.get('summaryCtrl').hasError('maxlength')">Summary cannot exceed 500 characters</mat-error>
+            
+        </mat-form-field>
+      </div>
+      <br>
+      <div 
+          fxLayout="row wrap" 
+          fxLayout.lt-sm="column" 
+          fxLayoutGap="32px" 
+          fxLayoutAlign="flex-start">
+        <div
+              fxFlex="0 1 calc(100% - 32px)"
+              fxFlex.lt-md="0 1 calc(100% - 32px)"
+              fxFlex.lt-sm="100%">
+          <app-focus-list 
+            [selectedItems]="selectedSpecialities"
+            (updateSelectedItems)="onSpecialityFocusListUpdate($event)" 
+            [inputPlaceholder]="'Specialities *'"
+            [requiredError]="'Specialities required'">
+          </app-focus-list>
+        </div>
+      </div>
+
+      <div>
+        <button mat-stroked-button matStepperPrevious>Back</button>
+        <button mat-stroked-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <!--mat-step [stepControl]="paymentInfoGroup" errorMessage="{{paymentInfoSummaryError}}">
+    <form [formGroup]="paymentInfoGroup">
+      <ng-template matStepLabel>Payment Information</ng-template>
+      <div 
+          fxLayout="row wrap" 
+          fxLayout.lt-sm="column" 
+          fxLayoutGap="32px" 
+          fxLayoutAlign="flex-start">
+        <mat-form-field
+              fxFlex="0 1 calc(50% - 32px)"
+              fxFlex.lt-md="0 1 calc(50% - 32px)"
+              fxFlex.lt-sm="100%">
+          <mat-label>Card Number</mat-label>
+          <input matInput placeholder="Card Number" formControlName="cardNoCtrl" type="text" maxlength="12" required [(ngModel)]="model.paymentInfo.cardNumber">
+          <mat-error *ngIf="paymentInfoGroup.get('cardNoCtrl').hasError('required')">Card number required</mat-error>
+          <mat-error *ngIf="paymentInfoGroup.get('cardNoCtrl').hasError('maxlength')">Must be 12 characters</mat-error>
+          <mat-error *ngIf="paymentInfoGroup.get('cardNoCtrl').hasError('pattern')">Only numeric values allowed</mat-error>
+        </mat-form-field>
+
+        <mat-form-field
+              fxFlex="0 1 calc(50% - 32px)"
+              fxFlex.lt-md="0 1 calc(50% - 32px)"
+              fxFlex.lt-sm="100%">
+            <mat-label>Card Type</mat-label>
+            <mat-select 
+                [(ngModel)]="model.paymentInfo.cardTypeId"
+                formControlName="cardTypeCtrl" 
+                required>
+                <mat-option>select</mat-option>
+                <mat-option 
+                    *ngFor="let b of baseCardTypes" 
+                    [value]="b.id">
+                {{b.description}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="paymentInfoGroup.get('cardTypeCtrl').hasError('required')">Card type required</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div 
+          fxLayout="row wrap" 
+          fxLayout.lt-sm="column" 
+          fxLayoutGap="32px" 
+          fxLayoutAlign="flex-start">
+        <mat-form-field
+              fxFlex="0 1 calc(50% - 32px)"
+              fxFlex.lt-md="0 1 calc(50% - 32px)"
+              fxFlex.lt-sm="100%">
+          <mat-label>Expiry Date</mat-label>
+          <input matInput placeholder="MM/YY" type="text" formControlName="expDateCtrl" maxlength="5" required (keyup)="expirationDateModelChange()" [(ngModel)]="model.paymentInfo.expirationDateModel">
+          <mat-error *ngIf="paymentInfoGroup.get('expDateCtrl').hasError('required')">Expriry date required</mat-error>
+          <mat-error *ngIf="paymentInfoGroup.get('expDateCtrl').hasError('maxlength')">Only five characters allowed</mat-error>
+          <mat-error *ngIf="paymentInfoGroup.get('expDateCtrl').hasError('pattern')">Incorrect format. Use MM/YY</mat-error>
+        </mat-form-field>
+        <mat-form-field
+              fxFlex="0 1 calc(50% - 32px)"
+              fxFlex.lt-md="0 1 calc(50% - 32px)"
+              fxFlex.lt-sm="100%">
+          <mat-label>CVC</mat-label>
+          <input matInput placeholder="CVC" type="text" formControlName="cvcNoCtrl" maxlength="4" required [(ngModel)]="model.paymentInfo.cvc">
+          <mat-error *ngIf="paymentInfoGroup.get('cvcNoCtrl').hasError('required')">CVC number required</mat-error>
+          <mat-error *ngIf="paymentInfoGroup.get('cvcNoCtrl').hasError('maxlength')">Must be 4 characters</mat-error>
+          <mat-error *ngIf="paymentInfoGroup.get('cvcNoCtrl').hasError('pattern')">Only numeric values allowed</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-stroked-button matStepperPrevious>Back</button>
+        <button mat-stroked-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step-->
+
+  <mat-step [stepControl]="contractInfoGroup" errorMessage="{{contractInfoSummaryError}}">
+    <form [formGroup]="contractInfoGroup">
+      <ng-template matStepLabel>Terms & Conditions</ng-template>
+      <p>Terms and conditions to go here...</p>
+      <mat-form-field floatLabel="always" appearance="none">
+        <mat-label>I Agree</mat-label>
+        <mat-slide-toggle matInput formControlName="tncCtrl" [(ngModel)]="model.isContractSigned">I Accept</mat-slide-toggle>
+        <textarea matInput hidden></textarea>
+      </mat-form-field>
+      <div>
+        <button mat-stroked-button matStepperPrevious>Back</button>
+        <button mat-stroked-button *ngIf="isCreateOp" (click)="stepper.reset()">Reset</button>
+      </div>
+    </form>
+  </mat-step>
+</mat-horizontal-stepper>
+<div *ngIf="isModelValid">
+    <app-persist-fab
+        (clicked)="onPersistClicked($event)">
+    </app-persist-fab>
+</div>

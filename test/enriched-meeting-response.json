@@ -1,0 +1,248 @@
+{
+    "Title": "Title X - modified",
+    "Description": "Description X",
+    "StartDateUtc": "2020-11-30T07:58:46",
+    "EstimatedDuration": 135,
+    "HostId": 16,
+    "MeetingStatusId": 1,
+    "ExMeetingId": 0,
+    "ImgId": 20026,
+    "TimezoneId": 4,
+    "CreationUser": {
+        "Username": "stiphost",
+        "Password": "stip",
+        "Email": "stiphost@gmail.com",
+        "Name": "stiphost",
+        "Surname": "stiphost",
+        "PaymentInfoId": 15,
+        "HostId": 16,
+        "ImgId": 16,
+        "TimezoneId": 1,
+        "AccountType": 1,
+        "PaymentInfo": null,
+        "Host": null,
+        "Img": null,
+        "Timezone": null,
+        "Interests": [],
+        "Token": null,
+        "Id": 15,
+        "UniqueId": "317bca08-51b8-41fa-a0e2-b646655b5923",
+        "CreationDateUtc": "2020-10-28T08:49:20.607",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "Host": {
+        "Company": "I work here",
+        "CareerSummary": "I worked here",
+        "ExtUserId": 6,
+        "IsConsultant": false,
+        "Specialities": [
+            {
+                "HostId": 16,
+                "FocusId": 2,
+                "Focus": {
+                    "Description": "Construction",
+                    "Id": 2,
+                    "UniqueId": "73031c91-ecd2-49bf-9850-4847e1484dd3",
+                    "CreationDateUtc": "2020-10-11T14:23:41.453",
+                    "CreationUserId": 0,
+                    "Inactive": false
+                },
+                "Id": 14,
+                "UniqueId": "9d2fdf10-d3d7-4e93-92c6-ad6504e9e6bd",
+                "CreationDateUtc": "2020-10-28T08:50:45.033",
+                "CreationUserId": 0,
+                "Inactive": false
+            }
+        ],
+        "ExtUser": null,
+        "Id": 16,
+        "UniqueId": "dda88c25-e8a6-44dd-a41f-be372170c3d6",
+        "CreationDateUtc": "2020-10-28T08:49:20.607",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "MeetingStatus": {
+        "Description": "Awaiting",
+        "Id": 1,
+        "UniqueId": "a0aa061e-17f0-4c58-ba97-fff0b4a6dba7",
+        "CreationDateUtc": "2020-10-28T16:23:48.44",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "ExtMeeting": {
+        "MeetingId": 0,
+        "PayloadSerializer": {
+            "id": 98417989222,
+            "topic": "Title X",
+            "type": 2,
+            "start_time": "2020-11-30T07:58:46Z",
+            "duration": 135,
+            "timezone": "Africa/Harare",
+            "created_at": "2020-11-11T08:15:14Z",
+            "agenda": "Description X",
+            "start_url": "https://zoom.us/s/98417989222?zak=eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnQiLCJ1aWQiOiI2QTQyS2lENVNvR1ZBMnotcnU5alN3IiwiaXNzIjoid2ViIiwic3R5Ijo5OSwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJCVG53aTdWNVVGNl9scWN3QkdSSGE1VDhYNFd0RENUSHJpdDJETlJzVjFvLkJnVXNhV05yZUVKbFltMXdURW94WkcweGJrVnlTMWRxZVdoT1pFTmtVblJFWlc4NGRqVXJiWGh4U25SaGR6MEFBQXd6UTBKQmRXOXBXVk16Y3owQUEyRjNNUSIsImV4cCI6MTYxMjg1ODUxNCwiaWF0IjoxNjA1MDgyNTE0LCJhaWQiOiJCOEZTeVhlVFJiYUpIY2xFUkJXQmR3IiwiY2lkIjoiIn0.UWZovOF4C0HSYkJUQB_rNHOuxlPDEIx2qQ35enaOhGk",
+            "join_url": "https://zoom.us/j/98417989222",
+            "password": null,
+            "h323_password": null,
+            "pmi": 0,
+            "tracking_fields": null,
+            "settings": {
+                "host_video": true,
+                "participant_video": true,
+                "cn_meeting": false,
+                "in_meeting": false,
+                "join_before_host": true,
+                "mute_upon_entry": true,
+                "watermark": false,
+                "use_pmi": false,
+                "approval_type": 2,
+                "registration_type": 0,
+                "audio": "both",
+                "auto_recording": "none",
+                "alternate_hosts": null,
+                "close_registration": false,
+                "waiting_room": true,
+                "global_dial_in_countries": [
+                    "US"
+                ],
+                "global_dial_in_numbers": [
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 3126266799",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 3462487799",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 6699006833",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 9292056099",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 2532158782",
+                        "type": "toll"
+                    },
+                    {
+                        "city": null,
+                        "country": "US",
+                        "country_name": "US",
+                        "number": "+1 3017158592",
+                        "type": "toll"
+                    }
+                ],
+                "contact_name": null,
+                "contact_email": null,
+                "registrants_confirmation_email": true,
+                "registrants_email_notification": false,
+                "meeting_authentication": false,
+                "authentication_option": null,
+                "authentication_domains": null,
+                "additional_data_center_regions": null,
+                "athentication_name": null
+            },
+            "recurrence": null
+        },
+        "Payload": "{\"id\":98417989222,\"topic\":\"Title X\",\"type\":2,\"start_time\":\"2020-11-30T07:58:46Z\",\"duration\":135,\"timezone\":\"Africa/Harare\",\"created_at\":\"2020-11-11T08:15:14Z\",\"agenda\":\"Description X\",\"start_url\":\"https://zoom.us/s/98417989222?zak=eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnQiLCJ1aWQiOiI2QTQyS2lENVNvR1ZBMnotcnU5alN3IiwiaXNzIjoid2ViIiwic3R5Ijo5OSwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJCVG53aTdWNVVGNl9scWN3QkdSSGE1VDhYNFd0RENUSHJpdDJETlJzVjFvLkJnVXNhV05yZUVKbFltMXdURW94WkcweGJrVnlTMWRxZVdoT1pFTmtVblJFWlc4NGRqVXJiWGh4U25SaGR6MEFBQXd6UTBKQmRXOXBXVk16Y3owQUEyRjNNUSIsImV4cCI6MTYxMjg1ODUxNCwiaWF0IjoxNjA1MDgyNTE0LCJhaWQiOiJCOEZTeVhlVFJiYUpIY2xFUkJXQmR3IiwiY2lkIjoiIn0.UWZovOF4C0HSYkJUQB_rNHOuxlPDEIx2qQ35enaOhGk\",\"join_url\":\"https://zoom.us/j/98417989222\",\"password\":null,\"h323_password\":null,\"pmi\":0,\"tracking_fields\":null,\"settings\":{\"host_video\":true,\"participant_video\":true,\"cn_meeting\":false,\"in_meeting\":false,\"join_before_host\":true,\"mute_upon_entry\":true,\"watermark\":false,\"use_pmi\":false,\"approval_type\":2,\"registration_type\":0,\"audio\":\"both\",\"auto_recording\":\"none\",\"alternate_hosts\":null,\"close_registration\":false,\"waiting_room\":true,\"global_dial_in_countries\":[\"US\"],\"global_dial_in_numbers\":[{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 3126266799\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 3462487799\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 6699006833\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 9292056099\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 2532158782\",\"type\":\"toll\"},{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 3017158592\",\"type\":\"toll\"}],\"contact_name\":null,\"contact_email\":null,\"registrants_confirmation_email\":true,\"registrants_email_notification\":false,\"meeting_authentication\":false,\"authentication_option\":null,\"authentication_domains\":null,\"additional_data_center_regions\":null,\"athentication_name\":null},\"recurrence\":null}",
+        "Id": 20003,
+        "UniqueId": "ce80a144-b459-4254-b9da-6cdff5fe1cb0",
+        "CreationDateUtc": "2020-11-11T08:15:14.883",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "Img": {
+        "Data": "",
+        "FileName": "heic1509a.jpg",
+        "Path": "http://localhost:3000/image/317bca08-51b8-41fa-a0e2-b646655b5923/851dcd61-c6e5-4e7c-846e-1679cd206bd3.jpg",
+        "ThumbnailPath": "http://localhost:3000/image/317bca08-51b8-41fa-a0e2-b646655b5923/851dcd61-c6e5-4e7c-846e-1679cd206bd3.jpg",
+        "Id": 20026,
+        "UniqueId": "8c8bd185-2c54-41a5-a542-3c0ea474c004",
+        "CreationDateUtc": "2020-11-11T07:59:07.917",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "Timezone": {
+        "Display": "Harare, Pretoria",
+        "UtcOffset": 2,
+        "ExtCode": "Africa/Harare",
+        "Id": 4,
+        "UniqueId": "1b934388-67d3-4244-abe2-0a818ba56d0d",
+        "CreationDateUtc": "2020-11-09T16:31:17.607",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    "ExtMeetingWebHooks": [],
+    "Foci": [
+        {
+            "MeetingId": 20006,
+            "FocusId": 1,
+            "Focus": {
+                "Description": "Housing & Deveopment",
+                "Id": 1,
+                "UniqueId": "87792284-e67c-4f2d-8822-7a2ee4a6d458",
+                "CreationDateUtc": "2020-10-11T14:23:40.973",
+                "CreationUserId": 0,
+                "Inactive": false
+            },
+            "Id": 20004,
+            "UniqueId": "1030931b-5571-4fe1-85b7-7bfc7343b3f3",
+            "CreationDateUtc": "2020-11-11T07:59:15.783",
+            "CreationUserId": 0,
+            "Inactive": false
+        },
+        {
+            "MeetingId": 20006,
+            "FocusId": 2,
+            "Focus": {
+                "Description": "Construction",
+                "Id": 2,
+                "UniqueId": "73031c91-ecd2-49bf-9850-4847e1484dd3",
+                "CreationDateUtc": "2020-10-11T14:23:41.453",
+                "CreationUserId": 0,
+                "Inactive": false
+            },
+            "Id": 20005,
+            "UniqueId": "6ee694b2-62db-4e3d-a85e-6c487c69b93a",
+            "CreationDateUtc": "2020-11-11T07:59:15.783",
+            "CreationUserId": 0,
+            "Inactive": false
+        }
+    ],
+    "Participants": [
+        {
+            "MeetingId": 20006,
+            "UserId": 15,
+            "User": null,
+            "Reviews": [],
+            "Id": 2,
+            "UniqueId": "6bb6b403-8d85-4481-a814-7afbc090224b",
+            "CreationDateUtc": "2020-11-12T18:57:53.94",
+            "CreationUserId": 0,
+            "Inactive": false
+        }
+    ],
+    "Id": 20006,
+    "UniqueId": "4ae91f37-68f1-41a2-bc56-a3e23f7ecbcc",
+    "CreationDateUtc": "2020-11-11T07:58:22.18",
+    "CreationUserId": 15,
+    "Inactive": false
+}

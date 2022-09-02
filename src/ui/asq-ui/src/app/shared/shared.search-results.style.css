@@ -1,0 +1,17 @@
+.container {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+
+.item {
+  padding: 5px;
+  margin: 10px;
+  float: left;
+}
+
+.inline-b-item {
+  display: inline-block;
+  max-width:400px;
+}

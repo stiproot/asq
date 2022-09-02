@@ -1,0 +1,47 @@
+<div class="content-cont"> 
+    <mat-card>
+        <mat-card-header>
+            <div 
+                (mouseover)="onMouseOverProfile()"
+                (mouseout)="onMouseOutProfile()"
+                mat-card-avatar 
+                style="background-image: url({{video.creationUserThumbnailUrl}});background-size: cover;">
+            </div>
+            <mat-card-title
+                (mouseover)="onMouseOver()" 
+                (mouseout)="onMouseOut()"
+                [mat-dialog-close]="true"
+                class="pointer-cursor"
+                routerLink='/video/{{video.uniqueId}}'>
+                {{video.title}}
+            </mat-card-title>
+            <mat-card-subtitle 
+                (mouseover)="onMouseOverProfile()"
+                (mouseout)="onMouseOutProfile()"
+                [mat-dialog-close]="true"
+                class="pointer-cursor" 
+                routerLink='/profile/{{video.creationUserUniqueId}}'>
+                {{video.creationUserName}} '{{video.creationUserUsername}}' {{video.creationUserSurname}}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-progress-bar class="summary-progress-bar" *ngIf="showProgressBar" mode="indeterminate"></mat-progress-bar>
+        <img 
+            class="pointer-cursor summary-img"
+            routerLink='/video/{{video.uniqueId}}'
+            (mouseover)="onMouseOver()" 
+            (mouseout)="onMouseOut()"
+            style="height:175px;object-fit:cover;width:100%;"
+            mat-card-image
+            src="{{video.thumbnailUrl}}" 
+            alt="{{video.title}}">
+        <mat-card-actions>
+          <button 
+            mat-icon-button 
+            type="button" 
+            color="accent" 
+            (click)="openDetailDialog(video.uniqueId)">
+            <mat-icon>open_in_new</mat-icon>
+          </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

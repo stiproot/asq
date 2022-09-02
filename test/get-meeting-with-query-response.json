@@ -1,0 +1,209 @@
+[
+    {
+        "Title": "test title",
+        "Description": "test description",
+        "StartDateUtc": "2020-10-30T19:12:41",
+        "EstimatedDuration": 135,
+        "HostId": 16,
+        "MeetingStatusId": 1,
+        "ExMeetingId": 0,
+        "ImgId": 24,
+        "Host": {
+            "Company": "I work here",
+            "CareerSummary": "I worked here",
+            "ExtUserId": 6,
+            "Specialities": [
+                {
+                    "HostId": 16,
+                    "FocusId": 2,
+                    "Focus": {
+                        "Description": "Construction",
+                        "Id": 2,
+                        "UniqueId": "73031c91-ecd2-49bf-9850-4847e1484dd3",
+                        "CreationDateUtc": "2020-10-11T14:23:41.453",
+                        "CreationUserId": 0,
+                        "Inactive": false
+                    },
+                    "Id": 14,
+                    "UniqueId": "9d2fdf10-d3d7-4e93-92c6-ad6504e9e6bd",
+                    "CreationDateUtc": "2020-10-28T08:50:45.033",
+                    "CreationUserId": 0,
+                    "Inactive": false
+                }
+            ],
+            "ExtUser": null,
+            "Id": 16,
+            "UniqueId": "dda88c25-e8a6-44dd-a41f-be372170c3d6",
+            "CreationDateUtc": "2020-10-28T08:49:20.607",
+            "CreationUserId": 0,
+            "Inactive": false
+        },
+        "MeetingStatus": {
+            "Description": "Awaiting",
+            "Id": 1,
+            "UniqueId": "a0aa061e-17f0-4c58-ba97-fff0b4a6dba7",
+            "CreationDateUtc": "2020-10-28T16:23:48.44",
+            "CreationUserId": 0,
+            "Inactive": false
+        },
+        "ExtMeeting": {
+            "MeetingId": 0,
+            "Payload": "{\"id\":99695203079,\"topic\":\"test-topic\",\"type\":2,\"start_time\":\"2020-10-26T17:00:00Z\",\"duration\":30,\"timezone\":\"Africa/Harare\",\"created_at\":\"2020-10-26T11:47:54Z\",\"agenda\":\"test-agenda\",\"start_url\":\"https://zoom.us/s/99695203079?zak=eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnQiLCJ1aWQiOiI2QTQyS2lENVNvR1ZBMnotcnU5alN3IiwiaXNzIjoid2ViIiwic3R5Ijo5OSwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJCVG53aTdWNVVGNl9scWN3QkdSSGE1VDhYNFd0RENUSHJpdDJETlJzVjFvLkJnVXNhV05yZUVKbFltMXdURW94WkcweGJrVnlTMWRxZVdoT1pFTmtVblJFWlc4NGRqVXJiWGh4U25SaGR6MEFBQXd6UTBKQmRXOXBXVk16Y3owQUEyRjNNUSIsImV4cCI6MTYxMTQ4ODg3NCwiaWF0IjoxNjAzNzEyODc0LCJhaWQiOiJCOEZTeVhlVFJiYUpIY2xFUkJXQmR3IiwiY2lkIjoiIn0.oK6XMKLO5krq6znnvddvFKxvUDS6OBNo_jKYqVSHhkk\",\"join_url\":\"https://zoom.us/j/99695203079?pwd=TzRvamhVVTQ5N25WTWw2ZG4zRG4vdz09\",\"password\":\"test\",\"h323_password\":\"374313\",\"pmi\":0,\"tracking_fields\":null,\"occurrences\":null,\"settings\":{\"host_video\":true,\"participant_video\":true,\"cn_meeting\":false,\"in_meeting\":false,\"join_before_host\":true,\"mute_upon_entry\":true,\"watermark\":false,\"use_pmi\":false,\"approval_type\":2,\"registration_type\":0,\"audio\":\"both\",\"auto_recording\":\"none\",\"alternate_hosts\":null,\"close_registration\":false,\"waiting_room\":true,\"global_dial_in_countries\":[\"US\"],\"global_dial_in_numbers\":[{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 3017158592\",\"type\":\"toll\"}],\"contact_name\":null,\"contact_email\":null,\"registrants_confirmation_email\":true,\"registrants_email_notification\":false,\"meeting_authentication\":false,\"authentication_option\":null,\"authentication_domains\":null,\"additional_data_center_regions\":null,\"athentication_name\":null},\"recurrence\":null}",
+            "Id": 2,
+            "UniqueId": "4581c745-1b92-4044-90a0-55355ed69c77",
+            "CreationDateUtc": "2020-10-29T19:13:18.717",
+            "CreationUserId": 0,
+            "Inactive": false
+        },
+        "Img": {
+            "Data": "",
+            "Base64": null,
+            "FileName": "heic1509a.jpg",
+            "Path": "/home/stiproot/Code/projects/asq/src/server/public/image/317bca08-51b8-41fa-a0e2-b646655b5923/heic1509a.jpg",
+            "ThumbnailPath": "/home/stiproot/Code/projects/asq/src/server/public/image/317bca08-51b8-41fa-a0e2-b646655b5923/heic1509a.jpg",
+            "Id": 24,
+            "UniqueId": "adc57cc2-71ca-462a-a664-35e8a3d12230",
+            "CreationDateUtc": "2020-10-29T19:12:58.217",
+            "CreationUserId": 0,
+            "Inactive": false
+        },
+        "ExtZoomWebHookDto": [],
+        "Foci": [
+            {
+                "MeetingId": 5,
+                "FocusId": 1,
+                "Focus": {
+                    "Description": "Housing & Deveopment",
+                    "Id": 1,
+                    "UniqueId": "87792284-e67c-4f2d-8822-7a2ee4a6d458",
+                    "CreationDateUtc": "2020-10-11T14:23:40.973",
+                    "CreationUserId": 0,
+                    "Inactive": false
+                },
+                "Id": 3,
+                "UniqueId": "01247c3f-e1dc-48df-b5e7-41254fe75548",
+                "CreationDateUtc": "2020-10-29T19:13:01.503",
+                "CreationUserId": 0,
+                "Inactive": false
+            }
+        ],
+        "Participants": [],
+        "Id": 5,
+        "UniqueId": "13432e5d-8c40-48ae-b532-33ff2395a405",
+        "CreationDateUtc": "2020-10-29T19:11:08.523",
+        "CreationUserId": 0,
+        "Inactive": false
+    },
+    {
+        "Title": "9a850036-0573-4552-8b5b-a64e540e5917",
+        "Description": "e3e45646-23c8-4baf-8f72-1e55159f8d04",
+        "StartDateUtc": "2020-11-01T10:47:17.927",
+        "EstimatedDuration": 120,
+        "HostId": 16,
+        "MeetingStatusId": 1,
+        "ExMeetingId": 0,
+        "ImgId": 23,
+        "Host": {
+            "Company": "I work here",
+            "CareerSummary": "I worked here",
+            "ExtUserId": 6,
+            "Specialities": [
+                {
+                    "HostId": 16,
+                    "FocusId": 2,
+                    "Focus": {
+                        "Description": "Construction",
+                        "Id": 2,
+                        "UniqueId": "73031c91-ecd2-49bf-9850-4847e1484dd3",
+                        "CreationDateUtc": "2020-10-11T14:23:41.453",
+                        "CreationUserId": 0,
+                        "Inactive": false
+                    },
+                    "Id": 14,
+                    "UniqueId": "9d2fdf10-d3d7-4e93-92c6-ad6504e9e6bd",
+                    "CreationDateUtc": "2020-10-28T08:50:45.033",
+                    "CreationUserId": 0,
+                    "Inactive": false
+                }
+            ],
+            "ExtUser": null,
+            "Id": 16,
+            "UniqueId": "dda88c25-e8a6-44dd-a41f-be372170c3d6",
+            "CreationDateUtc": "2020-10-28T08:49:20.607",
+            "CreationUserId": 0,
+            "Inactive": false
+        },
+        "MeetingStatus": {
+            "Description": "Awaiting",
+            "Id": 1,
+            "UniqueId": "a0aa061e-17f0-4c58-ba97-fff0b4a6dba7",
+            "CreationDateUtc": "2020-10-28T16:23:48.44",
+            "CreationUserId": 0,
+            "Inactive": false
+        },
+        "ExtMeeting": {
+            "MeetingId": 0,
+            "Payload": "{\"id\":99695203079,\"topic\":\"test-topic\",\"type\":2,\"start_time\":\"2020-10-26T17:00:00Z\",\"duration\":30,\"timezone\":\"Africa/Harare\",\"created_at\":\"2020-10-26T11:47:54Z\",\"agenda\":\"test-agenda\",\"start_url\":\"https://zoom.us/s/99695203079?zak=eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnQiLCJ1aWQiOiI2QTQyS2lENVNvR1ZBMnotcnU5alN3IiwiaXNzIjoid2ViIiwic3R5Ijo5OSwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJCVG53aTdWNVVGNl9scWN3QkdSSGE1VDhYNFd0RENUSHJpdDJETlJzVjFvLkJnVXNhV05yZUVKbFltMXdURW94WkcweGJrVnlTMWRxZVdoT1pFTmtVblJFWlc4NGRqVXJiWGh4U25SaGR6MEFBQXd6UTBKQmRXOXBXVk16Y3owQUEyRjNNUSIsImV4cCI6MTYxMTQ4ODg3NCwiaWF0IjoxNjAzNzEyODc0LCJhaWQiOiJCOEZTeVhlVFJiYUpIY2xFUkJXQmR3IiwiY2lkIjoiIn0.oK6XMKLO5krq6znnvddvFKxvUDS6OBNo_jKYqVSHhkk\",\"join_url\":\"https://zoom.us/j/99695203079?pwd=TzRvamhVVTQ5N25WTWw2ZG4zRG4vdz09\",\"password\":\"test\",\"h323_password\":\"374313\",\"pmi\":0,\"tracking_fields\":null,\"occurrences\":null,\"settings\":{\"host_video\":true,\"participant_video\":true,\"cn_meeting\":false,\"in_meeting\":false,\"join_before_host\":true,\"mute_upon_entry\":true,\"watermark\":false,\"use_pmi\":false,\"approval_type\":2,\"registration_type\":0,\"audio\":\"both\",\"auto_recording\":\"none\",\"alternate_hosts\":null,\"close_registration\":false,\"waiting_room\":true,\"global_dial_in_countries\":[\"US\"],\"global_dial_in_numbers\":[{\"city\":null,\"country\":\"US\",\"country_name\":\"US\",\"number\":\"\\u002B1 3017158592\",\"type\":\"toll\"}],\"contact_name\":null,\"contact_email\":null,\"registrants_confirmation_email\":true,\"registrants_email_notification\":false,\"meeting_authentication\":false,\"authentication_option\":null,\"authentication_domains\":null,\"additional_data_center_regions\":null,\"athentication_name\":null},\"recurrence\":null}",
+            "Id": 1,
+            "UniqueId": "0a05e19c-efd1-475e-aa21-6819f2bfb38e",
+            "CreationDateUtc": "2020-10-29T10:47:18.713",
+            "CreationUserId": 0,
+            "Inactive": false
+        },
+        "Img": {
+            "Data": "",
+            "Base64": null,
+            "FileName": "profile.png",
+            "Path": "/home/stiproot/Code/projects/asq/src/server/public/image/317bca08-51b8-41fa-a0e2-b646655b5923/profile.png",
+            "ThumbnailPath": "/home/stiproot/Code/projects/asq/src/server/public/image/317bca08-51b8-41fa-a0e2-b646655b5923/profile.png",
+            "Id": 23,
+            "UniqueId": "68ddc531-76ef-469b-9068-8b5f576806fe",
+            "CreationDateUtc": "2020-10-29T10:47:17.927",
+            "CreationUserId": 0,
+            "Inactive": false
+        },
+        "ExtZoomWebHookDto": [],
+        "Foci": [
+            {
+                "MeetingId": 4,
+                "FocusId": 1,
+                "Focus": {
+                    "Description": "Housing & Deveopment",
+                    "Id": 1,
+                    "UniqueId": "87792284-e67c-4f2d-8822-7a2ee4a6d458",
+                    "CreationDateUtc": "2020-10-11T14:23:40.973",
+                    "CreationUserId": 0,
+                    "Inactive": false
+                },
+                "Id": 1,
+                "UniqueId": "9d7e8bfa-5b05-4072-9067-7b0952008c2a",
+                "CreationDateUtc": "2020-10-29T10:47:17.927",
+                "CreationUserId": 0,
+                "Inactive": false
+            },
+            {
+                "MeetingId": 4,
+                "FocusId": 2,
+                "Focus": {
+                    "Description": "Construction",
+                    "Id": 2,
+                    "UniqueId": "73031c91-ecd2-49bf-9850-4847e1484dd3",
+                    "CreationDateUtc": "2020-10-11T14:23:41.453",
+                    "CreationUserId": 0,
+                    "Inactive": false
+                },
+                "Id": 2,
+                "UniqueId": "f896c855-17ed-4ec7-ad76-b4e621b514be",
+                "CreationDateUtc": "2020-10-29T10:47:17.927",
+                "CreationUserId": 0,
+                "Inactive": false
+            }
+        ],
+        "Participants": [],
+        "Id": 4,
+        "UniqueId": "12580b83-72c7-4b20-b560-3793fed002fb",
+        "CreationDateUtc": "2020-10-29T10:47:17.927",
+        "CreationUserId": 0,
+        "Inactive": false
+    }
+]

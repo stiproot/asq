@@ -1,0 +1,8 @@
+<div *ngIf="meetings.length > 0">
+    <ul class="container">
+        <li *ngFor="let m of meetings" class="item inline-b-item">
+            <app-meeting-summary [meeting]="m">
+            </app-meeting-summary>
+        </li>
+    </ul>
+</div>

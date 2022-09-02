@@ -1,0 +1,282 @@
+<mat-dialog-content *ngIf="isDialog">
+    <ng-container *ngTemplateOutlet="detailViewTemplate">
+    </ng-container>
+</mat-dialog-content>
+
+<ng-container *ngIf="!isDialog">
+    <ng-container *ngTemplateOutlet="detailViewTemplate">
+    </ng-container>
+</ng-container>
+
+<ng-template #detailViewTemplate>
+
+    <!--app-back-button></app-back-button-->
+
+    <form [formGroup]="meetingInfoGroup">
+
+        <div
+            fxLayout="column" 
+            fxLayout.lt-sm="column" 
+            fxLayoutGap="10px" 
+            fxLayoutAlign="space-around stretch">
+            <div 
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <label 
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    style="text-align:center;font-size:xx-large;"
+                    *ngIf="view">
+                    {{model?.title}}
+                </label>
+                <mat-form-field 
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    *ngIf="edit">
+                    <mat-label>Title</mat-label>
+                    <input 
+                        autoSizeInput
+                        [setParentWidth]="true"
+                        [minWidth]="100"
+                        #title
+                        style="font-size:xx-large;"
+                        maxlength="50"
+                        matInput 
+                        placeholder="Title" 
+                        formControlName="titleCtrl" 
+                        required 
+                        [(ngModel)]="model.title"
+                        [ngModelOptions]="{standalone: true}">
+                    <mat-hint align="end">{{title.value.length}} / 50</mat-hint>
+                    <mat-error *ngIf="meetingInfoGroup.get('titleCtrl').hasError('required')">Title required</mat-error>
+                    <mat-error *ngIf="meetingInfoGroup.get('titleCtrl').hasError('maxlength')">Title cannot exceed 50 characters</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div 
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <label
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    style="text-align:center;font-size:xx-large;"
+                    *ngIf="view">
+                    {{model?.startDateUtc | date: 'medium'}}
+                </label>
+                <mat-form-field
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 200px"
+                    *ngIf="edit"
+                    color="accent"
+                    appearance="fill">
+                    <mat-label>Date & Time</mat-label>
+                    <input 
+                        matInput 
+                        required
+                        [(ngModel)]="model.startDateUtc"
+                        [ngxMatDatetimePicker]="picker" 
+                        placeholder="Choose a date" 
+                        formControlName="startDateCtrl"
+                        [min]="minDate" 
+                        [max]="maxDate" 
+                        [disabled]="false">
+                    <mat-datepicker-toggle 
+                        matSuffix 
+                        [for]="picker">
+                    </mat-datepicker-toggle>
+                    <ngx-mat-datetime-picker 
+                        #picker 
+                        [showSpinners]="true" 
+                        [showSeconds]="false"
+                        [stepHour]="1" 
+                        [stepMinute]="15" 
+                        [stepSecond]="1"
+                        [touchUi]="false" 
+                        [color]="color" 
+                        [enableMeridian]="true" 
+                        [disableMinute]="false" 
+                        [hideTime]="false">
+                    </ngx-mat-datetime-picker>
+                    <mat-error *ngIf="meetingInfoGroup.get('startDateCtrl').hasError('required')">Date and time are required</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <mat-form-field
+                    class="duration-selector"
+                    *ngIf="edit || view">
+                    <mat-label>Hours</mat-label>
+                    <mat-select 
+                        (selectionChange)="onHrSelectionChange($event)"
+                        [(ngModel)]="estHr"
+                        formControlName="estHrCtrl" 
+                        [disabled]="view"
+                        required>
+                        <mat-option>select</mat-option>
+                        <mat-option 
+                            *ngFor="let hour of hours" 
+                            [value]="hour">
+                        {{hour}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="meetingInfoGroup.get('estHrCtrl').hasError('required')">Hours required</mat-error>
+                </mat-form-field>
+                <mat-form-field
+                    class="duration-selector"
+                    *ngIf="edit || view">
+                    <mat-label>Minutes</mat-label>
+                    <mat-select 
+                        [(ngModel)]="estMin"
+                        (selectionChange)="onMinSelectionChange($event)"
+                        formControlName="estMinCtrl" 
+                        [disabled]="view"
+                        required>
+                        <mat-option>select</mat-option>
+                        <mat-option 
+                            *ngFor="let min of minutes" 
+                            [value]="min">
+                        {{min}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="meetingInfoGroup.get('estMinCtrl').hasError('required')">Minutes required</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <app-timezone-select
+                    class="timezone-selector"
+                    [locked]="view"
+                    [selectedTimezoneId]="model?.timezoneId"
+                    (timezoneSelectionChange)="onTimezoneSelectionChange($event)">
+                </app-timezone-select>
+            </div>
+
+            <div 
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <label 
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    style="text-align:center;font-size:25px;"
+                    *ngIf="view">
+                    {{model?.creationUser?.name}} '{{model?.creationUser?.username}}' {{model?.creationUser?.surname}}
+                </label>
+            </div>
+
+            <div
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <h3
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    *ngIf="view">
+                    {{model?.averageRating}}
+                </h3>
+            </div>
+
+            <div 
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <h3 
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    *ngIf="view">
+                    {{model?.description}}
+                </h3>
+                <mat-form-field  
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    *ngIf="edit">
+                    <mat-label>Description</mat-label>
+                    <textarea 
+                        #desc
+                        rows="3"
+                        matInput 
+                        placeholder="Description" 
+                        formControlName="descCtrl" 
+                        required 
+                        maxlength="500"
+                        [(ngModel)]="model.description"
+                        [ngModelOptions]="{standalone: true}">
+                    </textarea>
+                    <mat-hint align="end">{{desc.value.length}} / 500</mat-hint>
+                    <mat-error *ngIf="meetingInfoGroup.get('descCtrl').hasError('required')">Description required</mat-error>
+                    <mat-error *ngIf="meetingInfoGroup.get('descCtrl').hasError('maxlength')">Description cannot exceed 500 characters</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <app-focus-list 
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    [locked]="view"
+                    [selectedItems]="selectedFocusList"
+                    (updateSelectedItems)="onFocusListUpdate($event)" 
+                    [inputPlaceholder]="'Meeting Focus *'">
+                </app-focus-list>
+            </div>
+            <div 
+                fxLayout="row"
+                fxLayoutAlign="center center">
+                <app-img-select
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    [imgPreviewUrl]="model?.img?.url"
+                    (fileChanged)="onFileChanged($event)"
+                    [requiredError]="'Meeting cover image required'"
+                    *ngIf="edit">
+                </app-img-select>
+                <img 
+                    fxFlex.lt-sm="1 1 100%"
+                    fxFlex.gt-md="1 1 50%"
+                    *ngIf="view"
+                    src="{{model?.img?.url}}">
+            </div>
+        </div>
+
+        <div *ngIf="model?.recordings?.length > 0">
+            <div *ngFor="let recording of model.recordings">
+                <video controls style="width:100%">
+                    <source src="{{recording.path}}" type="video/mp4">Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div
+            fxLayout="column" 
+            fxLayoutGap="10px" 
+            fxLayoutAlign="space-around stretch">
+            <app-register-for-meeting-button 
+                fxFlex
+                *ngIf="view"
+                (registrationSuccessful)="onRegistrationSuccessful()" 
+                (deregistrationSuccessful)="onDeregistrationSuccessful()" 
+                (registrationFailure)="onRegistrationFailure()" 
+                [meeting]="model">
+            </app-register-for-meeting-button>
+            <app-start-meeting-button 
+                *ngIf="view"
+                fxFlex
+                [meeting]="model">
+            </app-start-meeting-button>
+        </div>
+        <app-persist-fab
+            *ngIf="isModelValid && edit && !isDialog"
+            (clicked)="onPersistClick($event)">
+        </app-persist-fab>
+        <button 
+            (click)="onEditClick($event)"
+            *ngIf="view && canEdit && !isDialog && !model.hasPassed"
+            mat-fab 
+            type="button"
+            color="accent" 
+            class="edit-btn">
+            <mat-icon>edit</mat-icon>
+        </button>
+    </form>
+</ng-template>
