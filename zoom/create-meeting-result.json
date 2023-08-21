@@ -15,7 +15,7 @@
     "password": "test",
     "h323_password": "446064",
     "pstn_password": "446064",
-    "encrypted_password": "MEdkNXVVTldwSFhiWVlObXpXVko5QT09",
+    "encrypted_password": "",
     "settings": {
         "host_video": true,
         "participant_video": true,

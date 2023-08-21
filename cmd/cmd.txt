@@ -18,14 +18,14 @@ dotnet new xunit --name dbaccess.Tests
 
 -----------------------------------------------------------------------------
 
-dotnet ef dbcontext scaffold "Server=localhost;Database=ASQ;User ID=sa;Password=5t17@5q1" Microsoft.EntityFrameworkCore.SqlServer -o Models -d
-dotnet ef dbcontext scaffold "server=localhost;database=ASQ_TEST;user=asq_dbaccess;password=asq@my5q1" MySql.EntityFrameworkCore -o Models --force
+dotnet ef dbcontext scaffold "Server=localhost;Database=ASQ;User ID=sa;Password=5q1" Microsoft.EntityFrameworkCore.SqlServer -o Models -d
+dotnet ef dbcontext scaffold "server=localhost;database=ASQ_TEST;user=asq_dbaccess;password=my5q1" MySql.EntityFrameworkCore -o Models --force
 
 dotnet ef migrations add Init
 
 dotnet ef database update
 
-optionsBuilder.UseSqlServer("Server=localhost;Database=ASQ;User ID=sa;Password=5t17@5q1");
+optionsBuilder.UseSqlServer("Server=localhost;Database=ASQ;User ID=sa;Password=5q1");
 
 -----------------------------------------------------------------------------
 
